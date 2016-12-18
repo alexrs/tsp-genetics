@@ -27,7 +27,7 @@
 %  Author:    Hartmut Pohlheim
 %  History:   27.03.94     file created
 
-function NewChrom = recmut(OldChrom, FieldDR, MutOpt);
+function NewChrom = recmut(OldChrom, FieldDR, MutOpt)
 
 % Check parameter consistency
    if nargin < 2,  error('Not enough input parameter'); end
@@ -45,18 +45,20 @@ function NewChrom = recmut(OldChrom, FieldDR, MutOpt);
    else   
       if length(MutOpt) == 1, MutR = MutOpt; MutShrink = 1;
       elseif length(MutOpt) == 2, MutR = MutOpt(1); MutShrink = MutOpt(2);
-      else, error(' Too many parameter in MutOpt'); end
+      else, error(' Too many parameter in MutOpt');
+      end
    end
 
    if isempty(MutR), MutR = 1;
    elseif isnan(MutR), MutR = 1;
    elseif length(MutR) ~= 1, error('Parameter for recombination rate must be a scalar');
-   elseif (MutR < 0 | MutR > 1), error('Parameter for recombination rate must be a scalar in [0, 1]'); end
+   elseif (MutR < 0 || MutR > 1), error('Parameter for recombination rate must be a scalar in [0, 1]'); 
+   end
 
    if isempty(MutShrink), MutShrink = 1;
    elseif isnan(MutShrink), MutShrink = 1;
    elseif length(MutShrink) ~= 1, error('Parameter for shrinking recombination range must be a scalar');
-   elseif (MutShrink < 0 | MutShrink > 1), 
+   elseif (MutShrink < 0 || MutShrink > 1) 
       error('Parameter for shrinking recombination range must be a scalar in [0, 1]');
    end
 

@@ -45,29 +45,30 @@
 %                          Select and Structure added, parameter reordered
 %             17.03.94     renamed to migrate.m, more parameter checks
 
-function [Chrom, ObjV] = migrate(Chrom, SUBPOP, MigOpt, ObjV);
+function [Chrom, ObjV] = migrate(Chrom, SUBPOP, MigOpt, ObjV)
 
 
 % Check parameter consistency
    if nargin < 2, error('Input parameter SUBPOP missing'); end
-   if (nargout == 2 & nargin < 4), error('Input parameter ObjV missing'); end
+   if (nargout == 2 && nargin < 4), error('Input parameter ObjV missing'); end
 
-   [Nind, Nvar] = size(Chrom);
+   [Nind, ~] = size(Chrom);
    if length(SUBPOP) ~= 1, error('SUBPOP must be a scalar'); end
    if SUBPOP == 1, return; end
    if (Nind/SUBPOP) ~= fix(Nind/SUBPOP), error('Chrom and SUBPOP disagree'); end
    NIND = Nind/SUBPOP;  % Compute number of individuals per subpopulation
    
-   if nargin > 3, 
+   if nargin > 3 
       [mO, nO] = size(ObjV);
       if nO ~= 1, error('ObjV must be a column vector'); end
       if Nind ~= mO, error('Chrom and ObjV disagree'); end
       IsObjV = 1;
-   else IsObjV = 0; ObjV = [];
+   else
+       IsObjV = 0; ObjV = [];
    end
 
    if nargin < 3, MIGR = 0.2; Select = 0; Structure = 0; end   
-   if nargin > 2,
+   if nargin > 2
       if isempty(MigOpt), MIGR = 0.2; Select = 0; Structure = 0;
       elseif isnan(MigOpt), MIGR = 0.2; Select = 0; Structure = 0;
       else
@@ -82,10 +83,10 @@ function [Chrom, ObjV] = migrate(Chrom, SUBPOP, MigOpt, ObjV);
       end
    end
    
-   if (MIGR < 0 | MIGR > 1), error('Parameter for migration rate must be a scalar in [0 1]'); end
-   if (Select ~= 0 & Select ~= 1), error('Parameter for selection method must be 0 or 1'); end
-   if (Structure < 0 | Structure > 2), error ('Parameter for structure must be 0, 1 or 2'); end
-   if (Select == 1 & IsObjV == 0), error('ObjV for fitness-based migration needed');end
+   if (MIGR < 0 || MIGR > 1), error('Parameter for migration rate must be a scalar in [0 1]'); end
+   if (Select ~= 0 && Select ~= 1), error('Parameter for selection method must be 0 or 1'); end
+   if (Structure < 0 || Structure > 2), error ('Parameter for structure must be 0, 1 or 2'); end
+   if (Select == 1 && IsObjV == 0), error('ObjV for fitness-based migration needed');end
 
    if MIGR == 0, return; end
    MigTeil = max(floor(NIND * MIGR), 1);    % Number of individuals to migrate
@@ -100,10 +101,10 @@ function [Chrom, ObjV] = migrate(Chrom, SUBPOP, MigOpt, ObjV);
    % Create matrix with best/uniform individuals of all subpopulations
       for irun = 1:SUBPOP
          % sort ObjV of actual subpopulation
-            if Select == 1,              % fitness-based selection
-               [Dummy, IndMigSo]=sort(ObjV((irun-1)*NIND+1:irun*NIND));
+            if Select == 1              % fitness-based selection
+               [~, IndMigSo]=sort(ObjV((irun-1)*NIND+1:irun*NIND));
             else     % if Select == 0    % uniform selection
-               [Dummy, IndMigSo]=sort(rand(NIND, 1));
+               [~, IndMigSo]=sort(rand(NIND, 1));
             end
          % take MigTeil (best) individuals, copy individuals and objective values
             IndMigTeil=IndMigSo(1:MigTeil)+(irun-1)*NIND;
@@ -115,14 +116,14 @@ function [Chrom, ObjV] = migrate(Chrom, SUBPOP, MigOpt, ObjV);
       for irun = 1:SUBPOP
             ChromMig = ChromMigAll;
             if IsObjV == 1, ObjVMig = ObjVAll; end
-            if Structure == 1,       % neighbourhood 
+            if Structure == 1       % neighbourhood 
                % select individuals of neighbourhood subpopulations for ChromMig and ObjVMig
                popnum = [SUBPOP 1:SUBPOP 1];
                ins1 = popnum(irun); ins2 = popnum(irun + 2);
                InsRows = [(ins1-1)*MigTeil+1:ins1*MigTeil (ins2-1)*MigTeil+1:ins2*MigTeil];
                ChromMig = ChromMig(InsRows,:);
                if IsObjV == 1, ObjVMig = ObjVMig(InsRows,:); end
-            elseif Structure == 2,   % ring
+            elseif Structure == 2   % ring
                % select individuals of actual-1 subpopulation for ChromMig and ObjVMig
                popnum = [SUBPOP 1:SUBPOP 1];
                ins1 = popnum(irun);
@@ -136,7 +137,7 @@ function [Chrom, ObjV] = migrate(Chrom, SUBPOP, MigOpt, ObjV);
                if IsObjV == 1, ObjVMig(DelRows,:) = []; end
             end
          % Create an index from a sorted vector with random numbers   
-            [Dummy,IndMigRa]=sort(rand(size(ChromMig,1),1));
+            [~,IndMigRa]=sort(rand(size(ChromMig,1),1));
          % Take MigTeil numbers from the random vector
             IndMigN=IndMigRa((1:MigTeil)');
          % copy MigTeil individuals into Chrom and ObjV

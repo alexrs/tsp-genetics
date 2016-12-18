@@ -26,7 +26,7 @@
 %             15.12.93     MutMatrix as parameter and plot added
 %             16.03.94     function cleaned, MutMatrix removed, IndAll added
 
-function resplot(Chrom,IndAll,ObjV,Best,gen);
+function resplot(Chrom,IndAll,ObjV,Best,gen)
 
    % plot of best and mean value per generation
       subplot(2,2,1), plot(Best);

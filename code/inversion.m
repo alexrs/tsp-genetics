@@ -5,7 +5,7 @@
 %	2 : path representation
 %
 
-function NewChrom = inversion(OldChrom,Representation);
+function NewChrom = inversion(OldChrom,Representation)
 
 NewChrom=OldChrom;
 

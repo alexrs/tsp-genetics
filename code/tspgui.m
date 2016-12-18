@@ -47,7 +47,7 @@ CROSSOVER = 'xalt_edges';  % default crossover operator
 % load the data sets
 datasetslist = dir('datasets/');datasetslist = dir('datasets/');
 datasets=cell( size(datasetslist,1)-2,1);datasets=cell( size(datasetslist,1)-2 ,1);
-for i=1:size(datasets,1);
+for i=1:size(datasets,1)
     datasets{i} = datasetslist(i+2).name;
 end
 
@@ -102,7 +102,7 @@ runbutton = uicontrol(ph,'Style','pushbutton','String','START','Position',[0 10 
 set(fh,'Visible','on');
 
 
-    function datasetpopup_Callback(hObject,eventdata)
+    function datasetpopup_Callback(hObject,~)
         dataset_value = get(hObject,'Value');
         dataset = datasets{dataset_value};
         % load the dataset
@@ -114,7 +114,7 @@ set(fh,'Visible','on');
         axes(ah1);
         plot(x,y,'ko') 
     end
-    function llooppopup_Callback(hObject,eventdata)
+    function llooppopup_Callback(hObject,~)
         lloop_value = get(hObject,'Value');
         if lloop_value==1
             LOCALLOOP = 0;
@@ -122,42 +122,42 @@ set(fh,'Visible','on');
             LOCALLOOP = 1;
         end
     end
-    function ncitiesslider_Callback(hObject,eventdata)
+    function ncitiesslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(ncitiessliderv,'String',slider_value);
         NVAR = round(slider_value);
     end
-    function nindslider_Callback(hObject,eventdata)
+    function nindslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(nindsliderv,'String',slider_value);
         NIND = round(slider_value);
     end
-    function genslider_Callback(hObject,eventdata)
+    function genslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(gensliderv,'String',slider_value);
         MAXGEN = round(slider_value);
     end
-    function mutslider_Callback(hObject,eventdata)
+    function mutslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(mutsliderv,'String',slider_value);
         PR_MUT = round(slider_value)/100;
     end
-    function crossslider_Callback(hObject,eventdata)
+    function crossslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(crosssliderv,'String',slider_value);
         PR_CROSS = round(slider_value)/100;
     end
-    function elitslider_Callback(hObject,eventdata)
+    function elitslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
@@ -165,13 +165,13 @@ set(fh,'Visible','on');
         ELITIST = round(slider_value)/100;
         GGAP = 1-ELITIST;
     end
-    function crossover_Callback(hObject,eventdata)
+    function crossover_Callback(hObject,~)
         crossover_value = get(hObject,'Value');
         crossovers = get(hObject,'String');
         CROSSOVER = crossovers(crossover_value);
         CROSSOVER = CROSSOVER{1};
     end
-    function runbutton_Callback(hObject,eventdata)
+    function runbutton_Callback(~,~)
         %set(ncitiesslider, 'Visible','off');
         set(nindslider,'Visible','off');
         set(genslider,'Visible','off');
@@ -181,7 +181,7 @@ set(fh,'Visible','on');
         run_ga(x, y, NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP, ah1, ah2, ah3);
         end_run();
     end
-    function inputbutton_Callback(hObject,eventdata)
+    function inputbutton_Callback(~,~)
         [x,y] = input_cities(NVAR);
         axes(ah1);
         plot(x,y,'ko')

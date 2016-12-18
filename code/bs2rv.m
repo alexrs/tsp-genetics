@@ -99,7 +99,7 @@ Prec = .5 .^ len;
 num = (~lin) .* Prec;
 den = (lin + uin - 1) .* Prec;
 
-for i = 1:Nvar,
+for i = 1:Nvar
     idx = li(i):lf(i);
     if code(i) % Gray decoding
 	    Chrom(:,idx)=rem(cumsum(Chrom(:,idx)')',2);

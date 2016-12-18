@@ -36,7 +36,7 @@ PRECI = 20;          % Precision of binary representation
 
 
 % Generational loop
-   while gen < MAXGEN,
+   while gen < MAXGEN
 
     % Assign fitness-value to entire population
        FitnV = ranking(ObjV);
@@ -54,7 +54,7 @@ PRECI = 20;          % Precision of binary representation
        ObjVSel = objfun1(bs2rv(SelCh,FieldD));
 
     % Reinsert offspring into current population
-       [Chrom ObjV]=reins(Chrom,SelCh,1,1,ObjV,ObjVSel);
+       [Chrom, ObjV]=reins(Chrom,SelCh,1,1,ObjV,ObjVSel);
 
     % Increment generational counter
        gen = gen+1;

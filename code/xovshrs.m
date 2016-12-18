@@ -20,7 +20,7 @@
 %  Author:    Hartmut Pohlheim
 %  History:   28.03.94     file created
 
-function NewChrom = xovshrs(OldChrom, XOVR);
+function NewChrom = xovshrs(OldChrom, XOVR)
 
 if nargin < 2, XOVR = NaN; end
 

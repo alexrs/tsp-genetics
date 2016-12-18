@@ -1,4 +1,4 @@
-function [x y] = input_cities(ncities)
+function [x, y] = input_cities(ncities)
         % get the input cities
         fg1 = figure(1);clf;
         %subplot(2,2,2);

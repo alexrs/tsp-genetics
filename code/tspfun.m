@@ -7,7 +7,7 @@
 %	ObjVal is a vector with the fitness values for each candidate tour (=each row of Phen)
 %
 
-function ObjVal = tspfun(Phen, Dist);
+function ObjVal = tspfun(Phen, Dist)
 	ObjVal=Dist(Phen(:,1),1);
 	for t=2:size(Phen,2)
 

@@ -23,7 +23,7 @@
 %             25.02.94     clean up
 %             19.03.94     multipopulation support removed
 
-function NewChrom = recint(OldChrom, XOVR);
+function NewChrom = recint(OldChrom, ~)
 
 % Identify the population size (Nind) and the number of variables (Nvar)
    [Nind,Nvar] = size(OldChrom);

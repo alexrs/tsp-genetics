@@ -45,7 +45,7 @@ Mask = cumsum(Mask')';
 % Compute cross sites for each pair of individuals, according to their
 % effective length and Px (two equal cross sites mean no crossover)
 xsites(:, 1) = Mask(:, Lind);
-if Npt >= 2,
+if Npt >= 2
         xsites(:, 1) = ceil(xsites(:, 1) .* rand(Xops, 1));
 end
 xsites(:,2) = rem(xsites + ceil((Mask(:, Lind)-1) .* rand(Xops, 1)) ...
@@ -55,9 +55,9 @@ xsites(:,2) = rem(xsites + ceil((Mask(:, Lind)-1) .* rand(Xops, 1)) ...
 Mask = (xsites(:,ones(1,Lind)) < Mask) == ...
                         (xsites(:,2*ones(1,Lind)) < Mask);
 
-if ~Npt,
+if ~Npt
         shuff = rand(Lind,Xops);
-        [ans,shuff] = sort(shuff);
+        [~,shuff] = sort(shuff);
         for i=1:Xops
           OldChrom(odd(i),:)=OldChrom(odd(i),shuff(:,i));
           OldChrom(even(i),:)=OldChrom(even(i),shuff(:,i));
@@ -70,12 +70,12 @@ NewChrom(even,:) = (OldChrom(odd,:).*(~Mask)) + (OldChrom(even,:).*Mask);
 
 % If the number of individuals is odd, the last individual cannot be mated
 % but must be included in the new population
-if rem(Nind,2),
+if rem(Nind,2)
   NewChrom(Nind,:)=OldChrom(Nind,:);
 end
 
-if ~Npt,
-        [ans,unshuff] = sort(shuff);
+if ~Npt
+        [~,unshuff] = sort(shuff);
         for i=1:Xops
           NewChrom(odd(i),:)=NewChrom(odd(i),unshuff(:,i));
           NewChrom(even(i),:)=NewChrom(even(i),unshuff(:,i));

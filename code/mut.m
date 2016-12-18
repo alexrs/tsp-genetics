@@ -43,7 +43,7 @@ if (nargin < 3), BaseV = crtbase(Lind);  end
 if (isnan(BaseV)), BaseV = crtbase(Lind);  end
 if (isempty(BaseV)), BaseV = crtbase(Lind);  end
 
-if (nargin == 3) & (Lind ~= length(BaseV))
+if (nargin == 3) && (Lind ~= length(BaseV))
    error('OldChrom and BaseV are incompatible'), end
 
 % create mutation mask matrix

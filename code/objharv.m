@@ -27,7 +27,7 @@
 % History:    18.02.94     file created (copy of vallinq.m)
 %             01.03.94     name changed in obj*
 
-function ObjVal = objharv(Chrom,switch_);
+function ObjVal = objharv(Chrom,switch_)
 
 % global gen;
 
@@ -62,7 +62,7 @@ function ObjVal = objharv(Chrom,switch_);
    elseif Nvar == Dim
       ObjVal = zeros(Nind,1);
       X = rep(x0,[Nind 1]);
-      for irun = 1:Nvar,
+      for irun = 1:Nvar
          X = a*X - Chrom(:,irun);
       end
       X;

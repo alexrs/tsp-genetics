@@ -4,7 +4,7 @@
 % Adj, Path are row vectosr
 %
 
-function Path = adj2path(Adj);
+function Path = adj2path(Adj)
 
 	walking_index=1;
 	Path=zeros(size(Adj));

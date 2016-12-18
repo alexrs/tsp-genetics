@@ -27,16 +27,20 @@
 %             25.02.94     clean up, check parameter consistency
 
 
-function Chrom = crtrp(Nind,FieldDR);
+function Chrom = crtrp(Nind,FieldDR)
 
 % Check parameter consistency
-   if nargin < 2, error('parameter FieldDR missing'); end
-   if nargin > 2, nargin = 2; end
+   if nargin < 2 
+       error('parameter FieldDR missing');
+   end
+   if nargin > 2
+       nargin = 2; 
+   end
 
    [mN, nN] = size(Nind);
    [mF, Nvar] = size(FieldDR);
 
-   if (mN ~= 1 & nN ~= 1), error('Nind has to be a scalar'); end
+   if (mN ~= 1 && nN ~= 1), error('Nind has to be a scalar'); end
    if mF ~= 2, error('FieldDR must be a matrix with 2 rows'); end
 
 % Compute Matrix with Range of variables and Matrix with Lower value

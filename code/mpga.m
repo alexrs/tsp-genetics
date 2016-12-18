@@ -86,7 +86,7 @@ RANGE = [0;200];	% Bounds on decision variables
       gen=gen+1;
 
    % Plot some results, rename title of figure for graphic output
-      if ((rem(gen,20) == 1) | (rem(gen,MAXGEN) == 0)),
+      if ((rem(gen,20) == 1) || (rem(gen,MAXGEN) == 0))
          set(gcf,'Name',[FigTitle ' in ' int2str(gen)]);
          resplot(Chrom(1:2:size(Chrom,1),:),...
                  IndAll(max(1,gen-39):size(IndAll,1),:),...

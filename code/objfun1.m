@@ -30,7 +30,7 @@
 %             16.12.93     switch_ == 3, return value of global minimum
 %             01.03.94     name changed in obj*
 
-function ObjVal = objfun1(Chrom,switch_);
+function ObjVal = objfun1(Chrom,switch_)
 
 % Dimension of objective function
    Dim = 20;
