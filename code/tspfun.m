@@ -4,7 +4,8 @@
 %	Phen contains the phenocode of the matrix coded in adjacency
 %	representation
 %	Dist is the matrix with precalculated distances between each pair of cities
-%	ObjVal is a vector with the fitness values for each candidate tour (=each row of Phen)
+%	ObjVal is a vector with the fitness values for each candidate tour 
+%   (=each row of Phen)
 %
 
 function ObjVal = tspfun(Phen, Dist)

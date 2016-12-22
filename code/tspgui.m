@@ -45,7 +45,7 @@ CROSSOVER = 'xalt_edges';  % default crossover operator
 %end
 
 % load the data sets
-datasetslist = dir('datasets/');datasetslist = dir('datasets/');
+datasetslist = dir('datasets/');
 datasets=cell( size(datasetslist,1)-2,1);datasets=cell( size(datasetslist,1)-2 ,1);
 for i=1:size(datasets,1)
     datasets{i} = datasetslist(i+2).name;
@@ -178,7 +178,9 @@ set(fh,'Visible','on');
         set(mutslider,'Visible','off');
         set(crossslider,'Visible','off');
         set(elitslider,'Visible','off');
+        tic;
         run_ga(x, y, NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP, ah1, ah2, ah3);
+        toc;
         end_run();
     end
     function inputbutton_Callback(~,~)
