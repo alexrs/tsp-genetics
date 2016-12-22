@@ -1,0 +1,25 @@
+\documentclass[12pt]{article}
+\usepackage{makeidx}
+\usepackage[margin=1in]{geometry}  % set the margins to 1in on all sides
+\usepackage{graphicx}              % to include figures
+\usepackage{amsmath}               % great math stuff
+\usepackage{amsfonts}              % for blackboard bold, etc
+\usepackage{amsthm}                % better theorem environments
+\usepackage{makeidx}               % index
+\usepackage[utf8]{inputenc}        % now we have tildes!
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{listings}
+\usepackage[spanish]{babel}
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{sections/}
+\usepackage{import}
+
+\begin{document}
+	\import{\sectiondir}{title.tex}
+	\tableofcontents
+	\import{\sectiondir}{intro.tex}
+	\import{\sectiondir}{experiments.tex}
+	\import{\sectiondir}{implementation.tex}
+	\import{\sectiondir}{performance.tex}
+\end{document}
