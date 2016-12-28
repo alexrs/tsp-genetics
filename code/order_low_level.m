@@ -3,11 +3,9 @@
 % Parents is a matrix with 2 rows, each row
 % represent the genocode of the parent
 %
-% Tim.Volodine@cs.kuleuven.ac.be
-% Tim.Pillards@cs.kuleuven.ac.be
 %
 
-function Offspring = cross_alternate_edges(Parents)
+function Offspring = order_low_level(Parents)
 	cols=size(Parents,2);
 	Offspring=zeros(1,cols);
     [~,InverseParents1]=sort(Parents(1,:));
