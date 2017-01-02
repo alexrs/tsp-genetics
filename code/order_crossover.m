@@ -28,8 +28,9 @@ if nargin < 2, XOVR = NaN; end
     % crossover of the two chromosomes
    	% results in 2 offsprings
 	if rand<XOVR			% recombine with a given probability
-		NewChrom(row,:) = order_low_level([OldChrom(row,:);OldChrom(row+1,:)]);
-		NewChrom(row+1,:) = order_low_level([OldChrom(row+1,:);OldChrom(row,:)]);
+        MatrixChrom = order_low_level([OldChrom(row,:);OldChrom(row+1,:)]);
+		NewChrom(row,:) = MatrixChrom(1, :);
+		NewChrom(row+1,:) = MatrixChrom(2, :);
 	else
 		NewChrom(row,:) = OldChrom(row,:);
 		NewChrom(row+1,:) = OldChrom(row+1,:);

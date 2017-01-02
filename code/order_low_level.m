@@ -3,65 +3,40 @@
 % Parents is a matrix with 2 rows, each row
 % represent the genocode of the parent
 %
-%
+% Returns a matrix containing the offspring
 
-function Offspring = order_low_level(Parents)
-	cols = size(Parents,2);
-	Offspring = zeros(1,cols);
-    %[~,InverseParents1] = sort(Parents(1,:));
-    %[~,InverseParents2] = sort(Parents(2,:));
-    %InverseParents = [InverseParents1; InverseParents2];
-    % InverseParents is the same tour but in reversed direction
-    % to easily find both edges in a city
-    AllParents = Parents;
-    % AllParents contains both directed edges for every city
-    % the last two rows contain the inversed tours
-	
-    %indexes of the cut points
-	start_index = rand_int(1, 1, [1, cols - 1]);
+
+function Offspring=order_low_level(Parents)
+
+    cols = size(Parents,2);
+
+    Offspring=zeros(2,cols);
+
+    start_index = rand_int(1, 1, [1, cols - 1]);
     end_index = rand_int(1, 1, [start_index + 1, cols]);
 
-%	start_index=1;
-	walking_index = start_index; % select a random seed edge
-	parentNr = 1;
-	visited_list = zeros(1,cols);
-	visited_list(walking_index) = 1;
-	cities = 1;
-	while cities < cols
-%		fprintf('%i',cities');
-        direction = rand_int(1, 1, [0,1]); % randomly chose the direction
-		new_city = AllParents(parentNr + 2 * direction, walking_index);
-        % if direction=1, use inverse direction (rows 3 and 4), hence the
-        % +2*direction
+    Offspring(1, start_index:end_index) = Parents(1, start_index:end_index);
+    Offspring(2, start_index:end_index) = Parents(2, start_index:end_index);
+
+
+    for off=1:2
+        % Create aux matrix to check the parent that has not been copied a segment
+        Buff = Parents(off,:);
+
+        members = ismember(Buff, Offspring(off, :));
+
+        % Take only the values from aux different to zero (the values not copied in the offspring)
+
+        Buff = Buff(members == 0);
+
+        %Copy not used values in the offspring in the order they appear in the second parent (or first for the second round)
+
+        % From second crossover point to the end of the vector
         
-        % if city already visited, try other direction
-        if visited_list(new_city) == 1
-            direction = 1 - direction; % switch direction: 0->1, 1->0
-            new_city = AllParents(parentNr + 2 * direction, walking_index);
-        end
-        
-        %if other direction also visited, visit a random city
-		if visited_list(new_city) == 1		% & cities<cols-1
-			% resolve the loop
-			allowed_list = zeros(1, cols - cities);
-			z = 1;
-			for t=1:size(visited_list,2)
-				if visited_list(t) == 0
-					allowed_list(z) = t;
-					z = z + 1;
-				end
-			end
-			if z-1~=cols-cities
-				warning('something went wrong');
-			end
-			new_city=allowed_list(rand_int(1,1,[1 size(allowed_list,2)]));
-		end
-		
-	  	Offspring(walking_index) = new_city;
-		walking_index = new_city;
-		cities = cities + 1;
-		visited_list(walking_index) = 1;
-		parentNr = 3 - parentNr;  % switch the parents (1->2 or 2->1)
-	end
-	Offspring(walking_index) = start_index;
+        Offspring(off, end_index+1:end) = Buff(start_index:end);
+        Offspring(off, 1:start_index - 1) = Buff(1:start_index - 1);
+    end
 % end function
+
+
+
