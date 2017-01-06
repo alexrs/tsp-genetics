@@ -34,9 +34,13 @@ CROSSOVER = 'order_crossover';
 % 1 for specific tests (limited tests, with graph saving)
 % 2 for benchmark (obtain just the distance)
 % 3 for both
-perform_tests(2, CROSSOVER);
+perform_tests(3, CROSSOVER);
 
 function perform_tests(n, CROSSOVER)
+    if ~exist(strcat('tests/',CROSSOVER), 'dir')
+        mkdir(strcat('tests/',CROSSOVER));    
+    end
+
     if(n==1 || n==3)
         
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,7 +62,7 @@ function perform_tests(n, CROSSOVER)
         for i=1:upbound(2)
             tspgui_test(CROSSOVER, NIND(i), MAXGEN(i),ELITIST(i), ...
             PR_CROSS(i),PR_MUT(i),LOCALLOOP, ...
-                strcat( 'tests/general_',num2str(i) ) );
+                strcat( 'tests/', CROSSOVER,'/','general_',num2str(i) ) );
         end
         
     end %end if(n==1 || n==3)
@@ -156,7 +160,7 @@ function perform_tests(n, CROSSOVER)
         title('Increase of number of individuals (all datasets)');
         ylabel('TSP distance');
         set(gca,'XTick', NIND);
-        saveas(nindF, 'tests/numberIndiv', 'jpg');
+        saveas(nindF, strcat('tests/',CROSSOVER, '/numberIndiv'), 'jpg');
         close(nindF);
         
         %Number of gen plot
@@ -166,7 +170,7 @@ function perform_tests(n, CROSSOVER)
         title('Increase of generations (all datasets)');
         ylabel('TSP distance');
         set(gca,'XTick', MAXGEN);
-        saveas(genF, 'tests/numberGens', 'jpg');
+        saveas(genF, strcat('tests/',CROSSOVER, '/numberGens'), 'jpg');
         close(genF);
         
         %Elitism plot
@@ -176,7 +180,7 @@ function perform_tests(n, CROSSOVER)
         title('Increase of elitism (all datasets)');
         ylabel('TSP distance');
         set(gca,'XTick', ELITIST);
-        saveas(elitF, 'tests/elitism', 'jpg');
+        saveas(elitF, strcat('tests/',CROSSOVER, '/elitism'), 'jpg');
         close(elitF);
         
         %Crossover/mutation plot
@@ -189,7 +193,7 @@ function perform_tests(n, CROSSOVER)
                 '0.75|0.25', '1|0'};
         set(gca,'XLim',[1 size(PR_CROSS,2)],'XTick',1:size(PR_CROSS,2) ...
             ,'XTickLabel',xlab)
-        saveas(porcF, 'tests/crossMut', 'jpg');
+        saveas(porcF, strcat('tests/',CROSSOVER, '/crossMut'), 'jpg');
         close(porcF);
         
     end %if
