@@ -1,42 +1,35 @@
-\definecolor{mygreen}{rgb}{0,0.6,0}
-\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\section{Implementation}
 
+\subsection{Representation}
+The origial code employed adjacency representation. EXPLAIN ADJACENCY REPRESENTATION AND EXAMPLE
 
-\section{Apendix}
-    - Path representation
-    - Order Crossover ( http://www.dca.fee.unicamp.br/\~gomide/courses/EA072/artigos/Genetic\_Algorithm\_TSPR\_eview\_Larranaga\_1999.pdf )
+In our implementation, we have deceided to use path representation. EXPLAIN PATH REPRESENTATION AND EXAMPLE. GIVE REASONS
+
+\subsection{Mutation}
     - Insertion mutation ( http://mnemstudio.org/genetic\-algorithms\-mutation.htm )
-
-\lstset{language=Matlab,
-    breaklines=true,
-    commentstyle=\color{mygreen},
-    numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
-    numbersep=5pt,                   % how far the line-numbers are from the code
-    numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
-    rulecolor=\color{black},
-    tabsize=2, 
-    }          % Set your language (you can change the language for each code-block optionally)
-
-\subsection{tsp\_ImprovePopulation.m}
-\lstinputlisting[frame=single]{../code/tsp_ImprovePopulation.m}
-\subsection{run\_ga.m}
-\lstinputlisting[frame=single]{../code/run_ga.m}
-\subsection{insertion.m}
-\lstinputlisting[frame=single]{../code/insertion.m}
-\subsection{order\_crossover.m}
-\lstinputlisting[frame=single]{../code/order_crossover.m}
-\subsection{order\_low\_level.m}
-\lstinputlisting[frame=single]{../code/order_low_level.m}
-\subsection{tspgui.m}
-    \begin{lstlisting}[frame=single]
-    CROSSOVER = 'order_crossover';  % default crossover operator}
-    crossover = uicontrol(ph,'Style','popupmenu', 'String',{'order_crossover'}, 'Value',1,'Position',[10 50 130 20],'Callback',@crossover_Callback);
-    \end{lstlisting}
-\subsection{tspfun.m}
-\lstinputlisting[frame=single]{../code/tspfun.m}
-\subsection{mutateTSP.m}
-\lstinputlisting[frame=single]{../code/mutateTSP.m}
+ EXPLAIN WHAT MUTATION IS
+ 
+ The mutation operator selected for this problem is insertion mutation. EXPLAIN HERE WHY AND WHAT IT IS
 
 
-% End of function
+0 1 \textbf{2} 3 4 5 6 7
 
+Take the 2 out of the sequence,
+
+0 1 3 4 5 6 7
+
+and reinsert the 2 at a randomly chosen position:
+
+0 1 3 4 5 \textbf{2} 6 7
+
+\subsection{Crossover}
+  - Order Crossover ( http://www.dca.fee.unicamp.br/\~gomide/courses/EA072/artigos/Genetic\_Algorithm\_TSPR\_eview\_Larranaga\_1999.pdf )
+
+  EXPLAIN WHAT CROSSOVER IS
+
+  EXPLAIN ORDER CROSSOVER
+
+  EXAMPLE
+
+\subsection{Fitness Function}
+The fitness functio has been changed 

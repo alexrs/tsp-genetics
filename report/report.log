@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  6 JAN 2017 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  6 JAN 2017 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -563,18 +563,19 @@ ort.toc)
 \openout3 = `report.toc'.
 
 
-(./sections/intro.tex) (./sections/experiments.tex)
+[1] (./sections/intro.tex) (./sections/experiments.tex)
 (./sections/implementation.tex
-Overfull \hbox (340.5588pt too wide) in paragraph at lines 6--9
-\OT1/cmr/m/n/12 - Path rep-re-sen-ta-tion - Or-der Crossover ( http://www.dca.f
-ee.unicamp.br/~gomide/courses/EA072/artigos/Genetic[]Algorithm[]TSPR[]eview[]La
-rranaga[]1999.pdf
+Overfull \hbox (231.31966pt too wide) in paragraph at lines 26--27
+\OT1/cmr/m/n/12 - Or-der Crossover ( http://www.dca.fee.unicamp.br/~gomide/cour
+ses/EA072/artigos/Genetic[]Algorithm[]TSPR[]eview[]Larranaga[]1999.pdf
  []
 
+) (./sections/performance.tex) (./sections/bibliography.tex)
+(./sections/apendix.tex
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-(../code/tsp_ImprovePopulation.m [1]
+(../code/tsp_ImprovePopulation.m [2]
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 13.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
@@ -583,7 +584,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 13.
 )
-(../code/run_ga.m [2]
+(../code/run_ga.m [3]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
@@ -591,31 +592,31 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
- [3])
-(../code/insertion.m [4]) (../code/order_crossover.m [5])
-(../code/order_low_level.m [6]) [7] (../code/tspfun.m) [8] (../code/mutateTSP.m
-)) (./sections/performance.tex) [9] (./report.aux) ) 
+ [4])
+(../code/insertion.m [5]) (../code/order_crossover.m [6])
+(../code/order_low_level.m [7] [8]) (../code/tspfun.m [9]) (../code/mutateTSP.m
+)) [10] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5837 strings out of 493089
- 76968 string characters out of 6134842
- 319771 words of memory out of 5000000
+ 5842 strings out of 493089
+ 77069 string characters out of 6134842
+ 318515 words of memory out of 5000000
  9180 multiletter control sequences out of 15000+600000
  11828 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,47p,278b,2127s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (10 pages, 117430 bytes).
+ 38i,7n,47p,271b,2127s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt12.pfb>
+Output written on report.pdf (11 pages, 119731 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 72 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
