@@ -1,35 +1,62 @@
 \section{Implementation}
 
 \subsection{Representation}
-The origial code employed adjacency representation. EXPLAIN ADJACENCY REPRESENTATION AND EXAMPLE
-
-In our implementation, we have deceided to use path representation. EXPLAIN PATH REPRESENTATION AND EXAMPLE. GIVE REASONS
-
-\subsection{Mutation}
-    - Insertion mutation ( http://mnemstudio.org/genetic\-algorithms\-mutation.htm )
- EXPLAIN WHAT MUTATION IS
- 
- The mutation operator selected for this problem is insertion mutation. EXPLAIN HERE WHY AND WHAT IT IS
-
-
-0 1 \textbf{2} 3 4 5 6 7
-
-Take the 2 out of the sequence,
-
-0 1 3 4 5 6 7
-
-and reinsert the 2 at a randomly chosen position:
-
-0 1 3 4 5 \textbf{2} 6 7
+The origial code employed adjacency representation. In adjacency representation a tour is represented as a list of \textit{n} cities where city \textit{j} is listed in position \textit{i} if and only if the tour leads from city \textit{i} to city \textit{j}. Thus, the list:\\
+\\
+\centerline{(7 6 8 5 3 4 2 1)}\\
+\\
+represents the tour:\\ 
+\\
+\centerline{3-8-1-7-2-6-4-5}\footnote{This explanation can be found in the slides about Traveling Salesman Problem}\\
+\\ 
+In our implementation, we have deceided to use path representation. Path representation is the most natural way of representing a tour. This can be easily seen with the following example. The list:
+\\
+\centerline{(1 2 7 5 6 3 4)}\\
+\\
+represents the path\\
+\centerline{1-2-7-5-6-3-4}\\
+\\
+It was also the simplest representation possible for this problem, and it was easy to implement, as the tour was first encoded in path representation, and then translated to adjancency representation using the function \texttt{path2adj}. Finally, it was translated again to path representation to be used in the plots with the function \texttt{adj2path}. 
 
 \subsection{Crossover}
-  - Order Crossover ( http://www.dca.fee.unicamp.br/\~gomide/courses/EA072/artigos/Genetic\_Algorithm\_TSPR\_eview\_Larranaga\_1999.pdf )
+  The new representation required a new crossover operator. The available options were:
+  \begin{itemize}
+  	\item Partially Matched Crossover (PMX)
+  	\item Order Crossover (OX)
+  	\item Cyclic Crossover (CX)
+  	\item Edge Recombination Crossover (ERX)
+  \end{itemize}
 
-  EXPLAIN WHAT CROSSOVER IS
+  The one selected is Order Crossover. This crossover exploits a property of the path representation, that the order of the cities (not their positions) are important. It construct an offspring by choosing a subtour of one parent and preserving the relative order of cities of the other parent.
+  Let's consider the following tours:
+  \\
+\centerline{(1 2 3 4 5 6 7 8)}\\
+\centerline{(2 4 6 8 7 5 3 1)}\\
+\\
+If we choose the cut point between the second and the third city, and se second cut point between the fifth and the sixth, we have:\\
+\centerline{(1 2 | 3 4 5 | 6 7 8)}\\
+\centerline{(2 4 | 6 8 7 | 5 3 1)}\\
 
-  EXPLAIN ORDER CROSSOVER
+And the offspring is created copying the segments between the cut points, and then, starting from the second cut points of one parent, the rest of the cities are copied in the order in which they appear in the other parent, giving: \\
+\centerline{(8 7 | 3 4 5 | 1 2 6)}\\
+\centerline{(4 5 | 6 8 7 | 1 2 3)}\\
 
-  EXAMPLE
+\subsection{Mutation}
+We were also asked to implement a new mutation operator. For this task, multiple and different options where available, such as Exchange Mutation, Scramble Mutation, Displacement Mutation or Insertion Mutation.
+As the crossover operator chosen exploits the order property aforementioned, we deceided that the mutation should break this order in some way to avoid reaching a local optima due to the lack of diversity in the order.
+
+The mutation operator selected for this problem is insertion mutation due to its simplicity and effectiveness. This mutation works in the following way. Imagine that we have the path:
+\\
+\centerline{0 1 \textbf{2} 3 4 5 6 7}\\
+\\
+Take the 2 out of the sequence,
+\\
+\centerline{0 1 3 4 5 6 7}\\
+\\
+and reinsert the 2 at a randomly chosen position:
+\\
+\centerline{0 1 3 4 5 \textbf{2} 6 7}\\
+
 
 \subsection{Fitness Function}
-The fitness functio has been changed 
+The fitness function has been changed as the original one worked with adjacency representation. The simplest way to adapt the old function to the new representation was using \texttt{path2adj}, converting the path to adjacency representation, and then computing the fitness in the same way as it was computed before.

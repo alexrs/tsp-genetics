@@ -2,15 +2,15 @@
 \contentsline {section}{\numberline {1}Experiments}{2}
 \contentsline {section}{\numberline {2}Implementation}{2}
 \contentsline {subsection}{\numberline {2.1}Representation}{2}
-\contentsline {subsection}{\numberline {2.2}Mutation}{2}
-\contentsline {subsection}{\numberline {2.3}Crossover}{2}
-\contentsline {subsection}{\numberline {2.4}Fitness Function}{2}
-\contentsline {section}{\numberline {3}Apendix}{2}
-\contentsline {subsection}{\numberline {3.1}tsp\_ImprovePopulation.m}{2}
-\contentsline {subsection}{\numberline {3.2}run\_ga.m}{3}
-\contentsline {subsection}{\numberline {3.3}insertion.m}{5}
-\contentsline {subsection}{\numberline {3.4}order\_crossover.m}{6}
-\contentsline {subsection}{\numberline {3.5}order\_low\_level.m}{7}
-\contentsline {subsection}{\numberline {3.6}tspgui.m}{9}
-\contentsline {subsection}{\numberline {3.7}tspfun.m}{9}
-\contentsline {subsection}{\numberline {3.8}mutateTSP.m}{10}
+\contentsline {subsection}{\numberline {2.2}Crossover}{2}
+\contentsline {subsection}{\numberline {2.3}Mutation}{3}
+\contentsline {subsection}{\numberline {2.4}Fitness Function}{3}
+\contentsline {section}{\numberline {3}Apendix}{5}
+\contentsline {subsection}{\numberline {3.1}tsp\_ImprovePopulation.m}{5}
+\contentsline {subsection}{\numberline {3.2}run\_ga.m}{6}
+\contentsline {subsection}{\numberline {3.3}insertion.m}{8}
+\contentsline {subsection}{\numberline {3.4}order\_crossover.m}{8}
+\contentsline {subsection}{\numberline {3.5}order\_low\_level.m}{10}
+\contentsline {subsection}{\numberline {3.6}tspgui.m}{11}
+\contentsline {subsection}{\numberline {3.7}tspfun.m}{11}
+\contentsline {subsection}{\numberline {3.8}mutateTSP.m}{12}

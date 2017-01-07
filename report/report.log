@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  6 JAN 2017 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  7 JAN 2017 11:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -565,17 +565,87 @@ ort.toc)
 
 [1] (./sections/intro.tex) (./sections/experiments.tex)
 (./sections/implementation.tex
-Overfull \hbox (231.31966pt too wide) in paragraph at lines 26--27
-\OT1/cmr/m/n/12 - Or-der Crossover ( http://www.dca.fee.unicamp.br/~gomide/cour
-ses/EA072/artigos/Genetic[]Algorithm[]TSPR[]eview[]Larranaga[]1999.pdf
+Underfull \hbox (badness 10000) in paragraph at lines 4--20
+
  []
 
-) (./sections/performance.tex) (./sections/bibliography.tex)
-(./sections/apendix.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--20
+
+ []
+
+
+Overfull \hbox (4.75006pt too wide) in paragraph at lines 4--20
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--20
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 24.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--39
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--39
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 40--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--59
+
+ []
+
+) (./sections/performance.tex) (./sections/bibliography.tex [3]
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+[]\OT1/cmr/m/n/12 mnemstudio.org \OT1/cmr/m/it/12 Ge-netic al-go-rithms mu-ta-t
+ions \OT1/cmr/m/n/12 http://mnemstudio.org/genetic-
+ []
+
+) [4] (./sections/apendix.tex
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-(../code/tsp_ImprovePopulation.m [2]
+(../code/tsp_ImprovePopulation.m
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 13.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
@@ -583,40 +653,34 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 13.
-)
-(../code/run_ga.m [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 19.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
- [4])
-(../code/insertion.m [5]) (../code/order_crossover.m [6])
-(../code/order_low_level.m [7] [8]) (../code/tspfun.m [9]) (../code/mutateTSP.m
-)) [10] (./report.aux) ) 
+) [5]
+(../code/run_ga.m [6]) [7] (../code/insertion.m) (../code/order_crossover.m
+[8]) [9] (../code/order_low_level.m [10]) (../code/tspfun.m [11])
+(../code/mutateTSP.m [12])) [13] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5842 strings out of 493089
- 77069 string characters out of 6134842
- 318515 words of memory out of 5000000
- 9180 multiletter control sequences out of 15000+600000
- 11828 words of font info for 44 fonts, out of 8000000 for 9000
+ 5857 strings out of 493089
+ 77224 string characters out of 6134842
+ 326535 words of memory out of 5000000
+ 9193 multiletter control sequences out of 15000+600000
+ 13527 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,7n,47p,271b,2127s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmtt12.pfb>
-Output written on report.pdf (11 pages, 119731 bytes).
+ 38i,8n,47p,425b,1843s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (14 pages, 157277 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
