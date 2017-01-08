@@ -28,15 +28,46 @@ if ~exist('tests', 'dir')
   mkdir('tests');
 end
 
-CROSSOVER = 'order_crossover';
+%CROSSOVER = 'order_crossover';
 %CROSSOVER = 'xalt_edges';
 
 % 1 for specific tests (limited tests, with graph saving)
 % 2 for benchmark (obtain just the distance)
 % 3 for both
-perform_tests(2, CROSSOVER);
+%perform_tests(3, CROSSOVER);
+
+
+%Testing optional
+datasetslist = dir('datasets/');
+datasets=cell( size(datasetslist,1)-2,1);
+for i=1:size(datasets,1)
+    datasets{i} = datasetslist(i+2).name;
+end
+data = load(['datasets/' datasets{1}]);
+x=data(:,1)/max([data(:,1);data(:,2)]);
+y=data(:,2)/max([data(:,1);data(:,2)]);
+NVAR=size(data,1);
+NIND=50;		% Number of individuals
+MAXGEN=100;		% Maximum no. of generations
+NVAR=26;		% No. of variables
+PRECI=1;		% Precision of variables
+ELITIST=15;    % percentage of the elite population
+STOP_PERCENTAGE=.95;    % percentage of equal fitness individuals for stopping
+PR_CROSS=.95;     % probability of crossover
+PR_MUT=.05;       % probability of mutation
+LOCALLOOP=0;      % local loop removal
+CROSSOVER = 'order_crossover';  % default crossover operator
+
+run_ga(x,y,NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, ...
+    PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP)
+
+
 
 function perform_tests(n, CROSSOVER)
+    if ~exist(strcat('tests/',CROSSOVER), 'dir')
+        mkdir(strcat('tests/',CROSSOVER));    
+    end
+
     if(n==1 || n==3)
         
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -58,7 +89,7 @@ function perform_tests(n, CROSSOVER)
         for i=1:upbound(2)
             tspgui_test(CROSSOVER, NIND(i), MAXGEN(i),ELITIST(i), ...
             PR_CROSS(i),PR_MUT(i),LOCALLOOP, ...
-                strcat( 'tests/general_',num2str(i) ) );
+                strcat( 'tests/', CROSSOVER,'/','general_',num2str(i) ) );
         end
         
     end %end if(n==1 || n==3)
@@ -156,7 +187,7 @@ function perform_tests(n, CROSSOVER)
         title('Increase of number of individuals (all datasets)');
         ylabel('TSP distance');
         set(gca,'XTick', NIND);
-        saveas(nindF, 'tests/numberIndiv', 'jpg');
+        saveas(nindF, strcat('tests/',CROSSOVER, '/numberIndiv'), 'jpg');
         close(nindF);
         
         %Number of gen plot
@@ -166,7 +197,7 @@ function perform_tests(n, CROSSOVER)
         title('Increase of generations (all datasets)');
         ylabel('TSP distance');
         set(gca,'XTick', MAXGEN);
-        saveas(genF, 'tests/numberGens', 'jpg');
+        saveas(genF, strcat('tests/',CROSSOVER, '/numberGens'), 'jpg');
         close(genF);
         
         %Elitism plot
@@ -176,7 +207,7 @@ function perform_tests(n, CROSSOVER)
         title('Increase of elitism (all datasets)');
         ylabel('TSP distance');
         set(gca,'XTick', ELITIST);
-        saveas(elitF, 'tests/elitism', 'jpg');
+        saveas(elitF, strcat('tests/',CROSSOVER, '/elitism'), 'jpg');
         close(elitF);
         
         %Crossover/mutation plot
@@ -189,7 +220,7 @@ function perform_tests(n, CROSSOVER)
                 '0.75|0.25', '1|0'};
         set(gca,'XLim',[1 size(PR_CROSS,2)],'XTick',1:size(PR_CROSS,2) ...
             ,'XTickLabel',xlab)
-        saveas(porcF, 'tests/crossMut', 'jpg');
+        saveas(porcF, strcat('tests/',CROSSOVER, '/crossMut'), 'jpg');
         close(porcF);
         
     end %if
