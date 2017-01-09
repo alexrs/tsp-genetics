@@ -43,7 +43,7 @@ And the offspring is created copying the segments between the cut points, and th
 
 \subsection{Mutation}
 We were also asked to implement a new mutation operator. For this task, multiple and different options where available, such as Exchange Mutation, Scramble Mutation, Displacement Mutation or Insertion Mutation.
-As the crossover operator chosen exploits the order property aforementioned, we decided that the mutation should break this order in some way to avoid reaching a local optima due to the lack of diversity in the order.
+As the crossover operator chosen exploits the order property aforementioned, we deceided that the mutation should break this order in some way to avoid reaching a local optima due to the lack of diversity in the order.
 
 The mutation operator selected for this problem is insertion mutation due to its simplicity and effectiveness. This mutation works in the following way. Imagine that we have the path:
 \\
