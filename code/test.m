@@ -28,13 +28,13 @@ if ~exist('tests', 'dir')
   mkdir('tests');
 end
 
-CROSSOVER = 'order_crossover';
-%CROSSOVER = 'xalt_edges';
+%CROSSOVER = 'order_crossover';
+CROSSOVER = 'xalt_edges';
 
 % 1 for specific tests (limited tests, with graph saving)
 % 2 for benchmark (obtain just the distance)
 % 3 for both
-perform_tests(3, CROSSOVER);
+perform_tests(1, CROSSOVER);
 
 function perform_tests(n, CROSSOVER)
     if ~exist(strcat('tests/',CROSSOVER), 'dir')
@@ -87,7 +87,7 @@ function perform_tests(n, CROSSOVER)
         upbound = size(NIND);
         modality = 0;
         
-        if (CROSSOVER == 'order_crossover')
+        if (strcmp(CROSSOVER,'order_crossover'))
             modality=1;
         end
         

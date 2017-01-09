@@ -13,6 +13,7 @@ set, is made, by selecting specific values. Both the general, and the specific
 tests will serve as a medium to compare both representations, in order to look
 for differences (or lack thereof)
 \\
+\subsection{General tests}
 For the general tests, the default values are:\\
 \\
 \begin{itemize}
@@ -33,7 +34,7 @@ And, the different values for each modified parameter are
   \item Crossover|Mutation balance - [1|0,0.95|0.05,0.9|0.1,0.75|0.25,
 0.5|0.5,0.25|0.75,0|1]\\
 \end {itemize}
-\subsection{Adjacency representation}
+\subsubsection{Adjacency representation}
 \\
 With the provided representation, adjacency representation, the results of the
 general tests are:\\
@@ -83,7 +84,7 @@ the nature of the result makes it necessary to test other values, since,
 study in the specific tests, order to make a conclussion}
 
 
-\subsection{Path representation}\\
+\subsubsection{Path representation}\\
 As explained in the implementation section, the representation we
 implemented is path representation. The results after executing the same
 tests as before are\\
@@ -119,5 +120,179 @@ or crossover}
 
 
 \subsection{Specific tests}
+
+The specific tests are separeted in 2 phases.\\
+ First phase, study the impact of the best parameter values seen in the general
+tests, for each representation individually. The second phase
+corresponds to the comparison between the representation results, first with the
+base case, and then with the best result obtained.
+All the tests have been made with the benchmark dataset called bcl380.tsp.
+
+\subsubsection{Adjacency representation}
+
+The base values are the same as with the general case.\\
+\big[Number of individuals, generations, percentage of elitism, of crossover and
+mutation] = [50,50,5\%,95\%, 5\%\big]\\
+
+The result obtained is
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_1.jpg}\\
+The test was executed in 12.66 sec\\
+\\
+200 was the number of individuals that was deemed to be apropiate. 
+The test, keeping all other values, but changing just the number of
+individuals is \\
+\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[200,50,5\%,95\%,5\%] \\
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_2.jpg}\\
+We can see that the minimum distance has decreased, from ~64 to ~61, not a
+big decrease, but significant enough. Increasing the number of
+individuals to 200 is then to be considered a good measure. Timewise, the test was executed in 31.61 seconds. More than twice the time for the
+first, which, given the increase in the number of individuals, is not out of
+the expected. \\
+\\
+For the next test, this time the number of generations has been
+increased. As previously stated, the best number was 200, but a higher number
+was also suitable for some cases. We tried, respectively, with 200, 750, and
+1000 generations, thus having\\
+\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[50,200,5\%,95\%,5\%]\\
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_3.jpg}\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[50,750,50,5\%,95\%,5\%] \\
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_4.jpg}\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[50,1000,5\%,95\%,5\%]\\
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_5.jpg}\\
+\\
+
+We can observe that the result is slightly better, with each increment of
+generations, but the cost is excesive, when it comes to time. The times for the
+tests are 46.01, 171.67, and 233.85 seconds, which means, ~4, ~13.5 and ~18.5
+times more than the base case.
+\\
+As the elitism parameter was abundantly clear that was to be kept at 0.05 (or
+up to 0.1 at most), and it is already the value for the base case, there is
+no specific test for the elitism. There is, however, for the percentage of
+crossover and mutation. Since the result was a bit unexpected, we did not only
+try with the apparent best result (0.5 percentage of each), but with cases of
+0.2 crossover | 0.8 mutation, and viceversa. The results for the tests are\\
+\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] = [50,50,5\%,50\%,50\%] \\
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_6.jpg}\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[50,50,5\%,20\%,80\%] \\
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_7.jpg}\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[50,50,5\%,80\%,20\%] \\
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_8.jpg}\\
+\\
+The test confirms the results obtained in the general test. The best ratio of
+crossover|mutation is 50\%|50\%, since, out of the 3 configurations, it has the
+best result, while all of them are over the base case. Although not as relevant
+in this case, the times of the tests are equal or even lower than the original, 11.3,
+9.71, 12.92 seconds respectively. \\
+\\
+Finally, the combination of the good results is what made them get
+outstanding results. In order to avoid bias, the first combination is just
+modifying the number of individuals, and the number of generations\\
+\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] = [200,200,5\%,95\%,5\%] \\
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_6.jpg}\\
+We can see an improvement, even slightly better than those obtained with the
+increase in number of individuals or generations alone. The number of
+generations was choosen to be 200 because we deemed it good enough, and while
+costly, not as costly as higher quantities.\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[200,200,5\%,50\%,50\%] \\
+\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_7.jpg}\\
+And the final result, when combining every single improvement, is the best of
+all. The decrease of distance is ~30.8\%, which could be said to be a great
+decrease. The time spent on this test was 76.74 seconds, around 6.1 times
+more than the original, although high, we consider that it is not
+sufficiently high as to consider it bad. \\
+\\
+
+\subsubsection{Path representation}
+\\
+The same structure as the previous representation will be followed. One
+parameter at a time will be tested, stating the change, after
+performing a base test\\
+\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[50,50,5\%,95\%,5\%] \\
+\includegraphics[width=\textwidth]{img/specific/order_crossover/general_1.jpg}\\
+The first noticeable thing that we can observe here is that the distance
+is far higher than the adjacency representation, although looking at the
+time, it is better, since it takes only 6.88 seconds.\\
+\\
+We have the same situation that we had with the number of generations in the
+previous representation, but this time with the number of individuals. While
+200 was the amount with the generally lower distances, higher numbers also
+performed somewhat ok. Thus we tested for 200, 1000, and 1250.\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[200,50,5\%,95\%,5\%]\\
+\includegraphics[width=\textwidth]{img/specific/order_crossover/general_2.jpg}\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[1000,50,50,5\%,95\%,5\%] \\
+\includegraphics[width=\textwidth]{img/specific/order_crossover/general_3.jpg}\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[1250,50,5\%,95\%,5\%]\\
+\includegraphics[width=\textwidth]{img/specific/order_crossover/general_4.jpg}\\
+\\
+Although the change is not big, there is improvement, with each increase
+of individuals. And, what's more, as it is individuals, and not
+generations that we are increasnig now, there is higher cost, but not as high.
+The times for the tests are 9.08, 29.44, and 37.99 seconds, being the last not
+even 6 times higher. As there is the increase is the highest in the last
+test (1250 individuals), and the time is not humongously high, that value
+will be the one to be tested in the combined test.\\ 
+\\
+The general test for the number of generations revealed that the best quantity
+was 200.\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[50,200,5\%,95\%,5\%]\\
+\includegraphics[width=\textwidth]{img/specific/order_crossover/general_5.jpg}\\
+\\
+We can observe a slight improvement against the base case, 4 units of
+distance. Timewise, it is much more demanding that increasing
+individuals, since the test took 23.73 seconds to end, ~3.5 times more than the
+base case. Any higher number of generations will only hinder the process
+by making it tediously slow.\\
+\\
+As happened in the previous representation tests, the general test for path
+rep. showed that the value 5\% for elitism was without a doubt the best that
+could be set. So, the last to test is crossover and mutation, and here comes the tricky part for this representation. We found in our general
+test that no matter what the percentage for mutation or crossover was being
+tested, the results were almost independant from them. So, given that the base
+case already tested for a high crossover, and low mutation, the designed
+tests are, for low crossover and high mutation, and for a 50|50. \\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[50,200,5\%,50\%,50\%]\\
+\includegraphics[width=\textwidth]{img/specific/order_crossover/general_6.jpg}\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[50,200,5\%,50\%,50\%]\\
+\includegraphics[width=\textwidth]{img/specific/order_crossover/general_7.jpg}\\
+\\
+Although somewhat better than the base case, the result from one test to the
+other differ so little that it confirms the result of the general test, stating
+that, for this represention, given our implementation with our
+operators, the percentage is not really relevant. But, as it's still better
+than the base, and the best of the two, the percentages chosen for the combined
+test are 50\%|50\%. Obviosly, as the number of indviduals or
+generations did not change, the time is almost identical to the base case\\
+\\
+For the combined test, in hope to get the best result, this is the test made\\
+\\
+\big[Nind, gens, elitism, crossover, mutation\big] =[1250,200,5\%,50\%,50\%]\\
+\includegraphics[width=\textwidth]{img/specific/order_crossover/general_7.jpg}\\
+\\
+Unlike the previous combined test, the big expected improvement is nowhere
+to be seen. Going from a length of 127 to 120 is just a mere ~5.2\% of
+decrease. Furthermore, the combined increase of individuals and
+generations, given that the former is very high, makes the test to take extremly
+long compared to the base, going from 6.88 seconds to 141.02 seconds, ~20.5
+times more. 
+\textcolor{red}{TODO: Añadir posibles causas de que no mejore, y mencionar cuál
+puede ser la razón de que no cambie prácticamente nada cuando se modifica
+mutacion y crossover}
+
 
 

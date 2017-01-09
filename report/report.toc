@@ -5,15 +5,18 @@
 \contentsline {subsection}{\numberline {1.3}Mutation}{3}
 \contentsline {subsection}{\numberline {1.4}Fitness Function}{3}
 \contentsline {section}{\numberline {2}Experiments}{3}
-\contentsline {subsection}{\numberline {2.1}Adjacency representation}{4}
-\contentsline {subsection}{\numberline {2.2}Path representation}{8}
-\contentsline {subsection}{\numberline {2.3}Specific tests}{12}
-\contentsline {section}{\numberline {3}Apendix}{13}
-\contentsline {subsection}{\numberline {3.1}tsp\_ImprovePopulation.m}{13}
-\contentsline {subsection}{\numberline {3.2}run\_ga.m}{14}
-\contentsline {subsection}{\numberline {3.3}insertion.m}{16}
-\contentsline {subsection}{\numberline {3.4}order\_crossover.m}{16}
-\contentsline {subsection}{\numberline {3.5}order\_low\_level.m}{18}
-\contentsline {subsection}{\numberline {3.6}tspgui.m}{19}
-\contentsline {subsection}{\numberline {3.7}tspfun.m}{19}
-\contentsline {subsection}{\numberline {3.8}mutateTSP.m}{20}
+\contentsline {subsection}{\numberline {2.1}General tests}{4}
+\contentsline {subsubsection}{\numberline {2.1.1}Adjacency representation}{4}
+\contentsline {subsubsection}{\numberline {2.1.2}Path representation}{8}
+\contentsline {subsection}{\numberline {2.2}Specific tests}{12}
+\contentsline {subsubsection}{\numberline {2.2.1}Adjacency representation}{12}
+\contentsline {subsubsection}{\numberline {2.2.2}Path representation}{22}
+\contentsline {section}{\numberline {3}Apendix}{31}
+\contentsline {subsection}{\numberline {3.1}tsp\_ImprovePopulation.m}{31}
+\contentsline {subsection}{\numberline {3.2}run\_ga.m}{32}
+\contentsline {subsection}{\numberline {3.3}insertion.m}{34}
+\contentsline {subsection}{\numberline {3.4}order\_crossover.m}{34}
+\contentsline {subsection}{\numberline {3.5}order\_low\_level.m}{36}
+\contentsline {subsection}{\numberline {3.6}tspgui.m}{37}
+\contentsline {subsection}{\numberline {3.7}tspfun.m}{37}
+\contentsline {subsection}{\numberline {3.8}mutateTSP.m}{38}
