@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.1.8)  9 JAN 2017 17:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.1.8)  9 JAN 2017 19:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -803,45 +803,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--136
 
  []
 
-<sections/img/specific/xalt_edges/general_1.jpg, id=57, 1606.0pt x 1204.5pt>
-File: sections/img/specific/xalt_edges/general_1.jpg Graphic file (type jpg)
 
-<use sections/img/specific/xalt_edges/general_1.jpg>
+<sections/img/specific/xalt_edges/general_1.jpg, id=57, 1442.38875pt x 594.22pt
+>
+File: sections/img/specific/xalt_edges/general_1.jpg Graphic file (type jpg)
+ <use sections/img/specific/xalt_edges/general_1.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_1.jpg used on
  input line 138.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 193.51816pt.
 
-<sections/img/specific/xalt_edges/general_2.jpg, id=58, 1606.0pt x 1204.5pt>
+<sections/img/specific/xalt_edges/general_2.jpg, id=58, 1448.41125pt x 594.22pt
+>
 File: sections/img/specific/xalt_edges/general_2.jpg Graphic file (type jpg)
-
-<use sections/img/specific/xalt_edges/general_2.jpg>
+ <use sections/img/specific/xalt_edges/general_2.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_2.jpg used on
  input line 147.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 192.7112pt.
 
-<sections/img/specific/xalt_edges/general_3.jpg, id=59, 1606.0pt x 1204.5pt>
+<sections/img/specific/xalt_edges/general_3.jpg, id=59, 1446.40375pt x 598.235p
+t>
 File: sections/img/specific/xalt_edges/general_3.jpg Graphic file (type jpg)
-
-<use sections/img/specific/xalt_edges/general_3.jpg>
+ <use sections/img/specific/xalt_edges/general_3.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_3.jpg used on
  input line 161.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 194.28714pt.
 
-<sections/img/specific/xalt_edges/general_4.jpg, id=60, 1606.0pt x 1204.5pt>
+<sections/img/specific/xalt_edges/general_4.jpg, id=60, 1442.38875pt x 590.205p
+t>
 File: sections/img/specific/xalt_edges/general_4.jpg Graphic file (type jpg)
-
-<use sections/img/specific/xalt_edges/general_4.jpg>
+ <use sections/img/specific/xalt_edges/general_4.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_4.jpg used on
  input line 163.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 192.2106pt.
 
-<sections/img/specific/xalt_edges/general_5.jpg, id=61, 1606.0pt x 1204.5pt>
+<sections/img/specific/xalt_edges/general_5.jpg, id=61, 1438.37375pt x 600.2425
+pt>
 File: sections/img/specific/xalt_edges/general_5.jpg Graphic file (type jpg)
-
-<use sections/img/specific/xalt_edges/general_5.jpg>
+ <use sections/img/specific/xalt_edges/general_5.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_5.jpg used on
  input line 165.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 196.02902pt.
 
 Overfull \hbox (129.37921pt too wide) in paragraph at lines 137--167
 []\OT1/cmr/m/n/12 The re-sult ob-tained is [] 
@@ -888,44 +889,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 137--167
  []
 
 [12 <./sections/img/order_crossover/crossMut.jpg>] [13 <./sections/img/specific
-/xalt_edges/general_1.jpg>] [14 <./sections/img/specific/xalt_edges/general_2.j
-pg>] [15 <./sections/img/specific/xalt_edges/general_3.jpg>] [16 <./sections/im
-g/specific/xalt_edges/general_4.jpg>]
-<sections/img/specific/xalt_edges/general_6.jpg, id=79, 1606.0pt x 1204.5pt>
+/xalt_edges/general_1.jpg> <./sections/img/specific/xalt_edges/general_2.jpg>]
+[14 <./sections/img/specific/xalt_edges/general_3.jpg> <./sections/img/specific
+/xalt_edges/general_4.jpg> <./sections/img/specific/xalt_edges/general_5.jpg>]
+<sections/img/specific/xalt_edges/general_6.jpg, id=73, 1430.34375pt x 588.1975
+pt>
 File: sections/img/specific/xalt_edges/general_6.jpg Graphic file (type jpg)
-
-<use sections/img/specific/xalt_edges/general_6.jpg>
+ <use sections/img/specific/xalt_edges/general_6.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_6.jpg used on
  input line 182.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 193.17235pt.
 
-<sections/img/specific/xalt_edges/general_7.jpg, id=80, 1606.0pt x 1204.5pt>
+<sections/img/specific/xalt_edges/general_7.jpg, id=74, 1430.34375pt x 582.175p
+t>
 File: sections/img/specific/xalt_edges/general_7.jpg Graphic file (type jpg)
-
-<use sections/img/specific/xalt_edges/general_7.jpg>
+ <use sections/img/specific/xalt_edges/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_7.jpg used on
  input line 184.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 191.19449pt.
 
-<sections/img/specific/xalt_edges/general_8.jpg, id=81, 1606.0pt x 1204.5pt>
+<sections/img/specific/xalt_edges/general_8.jpg, id=75, 1428.33624pt x 590.205p
+t>
 File: sections/img/specific/xalt_edges/general_8.jpg Graphic file (type jpg)
-
-<use sections/img/specific/xalt_edges/general_8.jpg>
+ <use sections/img/specific/xalt_edges/general_8.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_8.jpg used on
  input line 186.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 194.11082pt.
 File: sections/img/specific/xalt_edges/general_6.jpg Graphic file (type jpg)
 
 <use sections/img/specific/xalt_edges/general_6.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_6.jpg used on
  input line 200.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 193.17235pt.
 File: sections/img/specific/xalt_edges/general_7.jpg Graphic file (type jpg)
 
 <use sections/img/specific/xalt_edges/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_7.jpg used on
  input line 207.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 191.19449pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 168--214
 
@@ -977,9 +978,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 168--214
 
  []
 
-[17 <./sections/img/specific/xalt_edges/general_5.jpg>] [18 <./sections/img/spe
-cific/xalt_edges/general_6.jpg>] [19 <./sections/img/specific/xalt_edges/genera
-l_7.jpg>] [20 <./sections/img/specific/xalt_edges/general_8.jpg>] [21]
+[15 <./sections/img/specific/xalt_edges/general_6.jpg> <./sections/img/specific
+/xalt_edges/general_7.jpg>] [16 <./sections/img/specific/xalt_edges/general_8.j
+pg>]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -991,75 +992,75 @@ l.217 T
        he same structure as the previous representation will be followed. One
 ? 
 
-<sections/img/specific/order_crossover/general_1.jpg, id=98, 1606.0pt x 1204.5p
-t>
+<sections/img/specific/order_crossover/general_1.jpg, id=82, 1425.325pt x 582.1
+75pt>
 File: sections/img/specific/order_crossover/general_1.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_1.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_1.jpg us
 ed on input line 223.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 191.86961pt.
 
-<sections/img/specific/order_crossover/general_2.jpg, id=99, 1606.0pt x 1204.5p
-t>
+<sections/img/specific/order_crossover/general_2.jpg, id=83, 1439.3775pt x 588.
+1975pt>
 File: sections/img/specific/order_crossover/general_2.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_2.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_2.jpg us
 ed on input line 234.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 191.96071pt.
 
-<sections/img/specific/order_crossover/general_3.jpg, id=100, 1606.0pt x 1204.5
-pt>
+<sections/img/specific/order_crossover/general_3.jpg, id=84, 1431.3475pt x 582.
+175pt>
 File: sections/img/specific/order_crossover/general_3.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_3.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_3.jpg us
 ed on input line 236.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 191.06123pt.
 
-<sections/img/specific/order_crossover/general_4.jpg, id=101, 1606.0pt x 1204.5
-pt>
+<sections/img/specific/order_crossover/general_4.jpg, id=85, 1433.355pt x 588.1
+975pt>
 File: sections/img/specific/order_crossover/general_4.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_4.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_4.jpg us
 ed on input line 238.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 192.76846pt.
 
-<sections/img/specific/order_crossover/general_5.jpg, id=102, 1606.0pt x 1204.5
-pt>
+<sections/img/specific/order_crossover/general_5.jpg, id=86, 1447.4075pt x 578.
+16pt>
 File: sections/img/specific/order_crossover/general_5.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_5.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_5.jpg us
 ed on input line 252.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 187.64394pt.
 
-<sections/img/specific/order_crossover/general_6.jpg, id=103, 1606.0pt x 1204.5
-pt>
+<sections/img/specific/order_crossover/general_6.jpg, id=87, 1437.37pt x 580.16
+75pt>
 File: sections/img/specific/order_crossover/general_6.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_6.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_6.jpg us
 ed on input line 269.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 189.60565pt.
 
-<sections/img/specific/order_crossover/general_7.jpg, id=104, 1606.0pt x 1204.5
-pt>
+<sections/img/specific/order_crossover/general_7.jpg, id=88, 1433.355pt x 584.1
+825pt>
 File: sections/img/specific/order_crossover/general_7.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_7.jpg us
 ed on input line 272.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 191.45264pt.
 File: sections/img/specific/order_crossover/general_7.jpg Graphic file (type jp
 g)
 
 <use sections/img/specific/order_crossover/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_7.jpg us
 ed on input line 285.
-(pdftex.def)             Requested size: 469.75502pt x 352.31024pt.
+(pdftex.def)             Requested size: 469.75502pt x 191.45264pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 217--296
 
@@ -1135,19 +1136,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 217--296
 
  []
 
-[22] [23 <./sections/img/specific/order_crossover/general_1.jpg>] [24 <./sectio
-ns/img/specific/order_crossover/general_2.jpg>] [25 <./sections/img/specific/or
-der_crossover/general_3.jpg>] [26 <./sections/img/specific/order_crossover/gene
-ral_4.jpg>] [27 <./sections/img/specific/order_crossover/general_5.jpg>]
-[28 <./sections/img/specific/order_crossover/general_6.jpg>] [29 <./sections/im
-g/specific/order_crossover/general_7.jpg>]) (./sections/performance.tex)
-(./sections/bibliography.tex
+[17 <./sections/img/specific/order_crossover/general_1.jpg>] [18 <./sections/im
+g/specific/order_crossover/general_2.jpg> <./sections/img/specific/order_crosso
+ver/general_3.jpg>] [19 <./sections/img/specific/order_crossover/general_4.jpg>
+ <./sections/img/specific/order_crossover/general_5.jpg>] [20 <./sections/img/s
+pecific/order_crossover/general_6.jpg> <./sections/img/specific/order_crossover
+/general_7.jpg>]) (./sections/performance.tex) (./sections/bibliography.tex
 Underfull \hbox (badness 10000) in paragraph at lines 19--22
 []\OT1/cmr/m/n/12 mnemstudio.org \OT1/cmr/m/it/12 Ge-netic al-go-rithms mu-ta-t
 ions \OT1/cmr/m/n/12 http://mnemstudio.org/genetic-
  []
 
-) [30] (./sections/apendix.tex
+) [21] (./sections/apendix.tex
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
@@ -1159,14 +1159,14 @@ File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 13.
-) [31]
-(../code/run_ga.m [32]) [33] (../code/insertion.m) (../code/order_crossover.m
-[34]) [35] (../code/order_low_level.m [36]) (../code/tspfun.m [37])
-(../code/mutateTSP.m [38])) [39] (./report.aux) ) 
+) [22]
+(../code/run_ga.m [23]) [24] (../code/insertion.m) (../code/order_crossover.m
+[25]) [26] (../code/order_low_level.m [27]) (../code/tspfun.m [28])
+(../code/mutateTSP.m [29])) [30] (./report.aux) ) 
 Here is how much of TeX's memory you used:
  5959 strings out of 493304
  81473 string characters out of 6139872
- 324846 words of memory out of 5000000
+ 324907 words of memory out of 5000000
  9248 multiletter control sequences out of 15000+600000
  13527 words of font info for 52 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1183,10 +1183,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (40 pages, 3757509 bytes).
+Output written on report.pdf (31 pages, 7870583 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 127 compressed objects within 2 object streams
+ 176 PDF objects out of 1000 (max. 8388607)
+ 106 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  116 words of extra memory for PDF output out of 10000 (max. 10000000)
 
