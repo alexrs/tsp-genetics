@@ -1,7 +1,7 @@
-function run_ga(x, y, NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP) %, ah1, ah2, ah3)
+function run_ga(x, y, NIND, MAXGEN, NVAR, SELECTION, STOP_PERCENTAGE, PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP, ah1, ah2, ah3)
 % usage: run_ga(x, y, 
 %               NIND, MAXGEN, NVAR, 
-%               ELITIST, STOP_PERCENTAGE, 
+%               SELECTION, STOP_PERCENTAGE, 
 %               PR_CROSS, PR_MUT, CROSSOVER, 
 %               ah1, ah2, ah3)
 %
@@ -9,17 +9,25 @@ function run_ga(x, y, NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, PR_CROSS, PR
 % x, y: coordinates of the cities
 % NIND: number of individuals
 % MAXGEN: maximal number of generations
-% ELITIST: percentage of elite population
+
+%  MODIFIED  %%%%%%%%%%%%
+% SELECTION: if elitism: percentage of elite population, else, 
+%            it's mu, quantity of individuals to be selected
+%  MODIFIED  %%%%%%%%%%%%
+
+
 % STOP_PERCENTAGE: percentage of equal fitness (stop criterium)
 % PR_CROSS: probability for crossover
 % PR_MUT: probability for mutation
 % CROSSOVER: the crossover operator
 % calculate distance matrix between each pair of cities
 % ah1, ah2, ah3: axes handles to visualise tsp
-{NIND MAXGEN NVAR ELITIST STOP_PERCENTAGE PR_CROSS PR_MUT CROSSOVER LOCALLOOP};
+{NIND MAXGEN NVAR SELECTION STOP_PERCENTAGE PR_CROSS PR_MUT CROSSOVER LOCALLOOP};
 
         tic;
-        GGAP = 1 - ELITIST;
+        if (SELECTION<1 && SELECTION>0)
+            GGAP = 1 - SELECTION;
+        end
         mean_fits=zeros(1,MAXGEN+1);
         worst=zeros(1,MAXGEN+1);
         Dist=zeros(NVAR,NVAR);
@@ -41,9 +49,7 @@ function run_ga(x, y, NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, PR_CROSS, PR
         ObjV = tspfun(Chrom,Dist);
         best=zeros(1,MAXGEN);
         % generational loop
-        i=1;
-        while i==1
-            i=0;
+        while gen<MAXGEN
             sObjV=sort(ObjV);
           	best(gen+1)=min(ObjV);
         	minimum=best(gen+1);
@@ -56,7 +62,7 @@ function run_ga(x, y, NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, PR_CROSS, PR
             end
             
             %visualizeTSP(x,y,adj2path(Chrom(t,:)), minimum, ah1, gen, best, mean_fits, worst, ah2, ObjV, NIND, ah3);
-            %visualizeTSP(x,y,Chrom(t,:), minimum, ah1, gen, best, mean_fits, worst, ah2, ObjV, NIND, ah3);
+            visualizeTSP(x,y,Chrom(t,:), minimum, ah1, gen, best, mean_fits, worst, ah2, ObjV, NIND, ah3);
 
             if (sObjV(stopN)-sObjV(1) <= 1e-15)
                   break;
@@ -64,7 +70,7 @@ function run_ga(x, y, NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, PR_CROSS, PR
         	%assign fitness values to entire population
         	FitnV=ranking(ObjV);
         	%select individuals for breeding
-        	SelCh=select_rr('sus', Chrom, FitnV, ELITIST);
+        	SelCh=select_rr('sus', Chrom, FitnV, SELECTION);
         	
             %recombine individuals (crossover)
             SelCh = recombin(CROSSOVER,SelCh,PR_CROSS);

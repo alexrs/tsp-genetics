@@ -40,15 +40,15 @@ function SelCh = select_rr(SEL_F, Chrom, FitnV, mu)
     %Select q random individuals
     q = zeros(10,1);
     for i=1:10
-        ind = uint8( rand()*size(Chrom,1) ) ;
+        ind = randi(size(Chrom,1)) ;
         q(i) = FitnV(ind); 
     end
     
-    tournament = zeros(size(Chrom,1),3);
-    %Tournament
+    %Tournament variable, only index and amount of wins is stored
+    tournament = zeros(size(Chrom,1),2);
+    %Tournament-> every indv compites against q rivals
     for i=1:size(Chrom,1)
-        tournament(i,1) = Chrom(i);
-        tournament(i,3) = FitnV(i);
+        tournament(i,1) = i;
         for j=1:size(q,1)
             if(FitnV(i) > q(j))
                 tournament(i,2) = tournament(i,2) + 1;       
@@ -56,32 +56,17 @@ function SelCh = select_rr(SEL_F, Chrom, FitnV, mu)
         end
     end
     
-    sortedTournament = sort(tournament,1);
-    sizTour = size(sortedTournament,1);
+    %Sort tournament by amount of wins
+    sortedTournament = sortrows(tournament,2);
+    
+    %Indexes of the mu better individuals
+    indexes = sortedTournament(size( ...
+        sortedTournament,1)-mu:size(sortedTournament,1),1);
+    
     
     SelCh = [];
-    FitnVSub = sortedTournament((sizTour-mu-1):sizTour,3);
+    FitnVSub = FitnV(indexes);
     ChrIx=feval(SEL_F, FitnVSub, mu);
     SelCh=[SelCh; Chrom(ChrIx,:)];
-    
-    %{
-    
-    
-    %Choosing mu individuals    
-    [maxTour,indicesTour] = sort(tournament(:),'descend');
-
-    choosen = choosen(1:mu);
-    indicesTour = sortingIndices(1:mu);
-    
-    %Coger los valores de chrom con los indices de indicesTour
-    
-    SelCh = zeros();
-    SelCh=[Selch; choosen];
-    
-    % Select individuals from population
-    FitnVSub = FitnV((1:Nind));
-    ChrIx=feval(SEL_F, FitnVSub, NSel);
-    SelCh=[SelCh; Chrom(ChrIx,:)];
-    %}
-
+       
 % End of function
