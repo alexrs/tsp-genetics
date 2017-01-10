@@ -6,11 +6,11 @@
 \contentsline {subsection}{\numberline {1.4}Fitness Function}{3}
 \contentsline {section}{\numberline {2}Experiments}{3}
 \contentsline {subsection}{\numberline {2.1}General tests}{4}
-\contentsline {subsubsection}{\numberline {2.1.1}Adjacency representation}{4}
-\contentsline {subsubsection}{\numberline {2.1.2}Path representation}{7}
+\contentsline {subsubsection}{\numberline {2.1.1}Original code}{4}
+\contentsline {subsubsection}{\numberline {2.1.2}Improved code}{7}
 \contentsline {subsection}{\numberline {2.2}Specific tests}{10}
-\contentsline {subsubsection}{\numberline {2.2.1}Adjacency representation}{10}
-\contentsline {subsubsection}{\numberline {2.2.2}Path representation}{15}
+\contentsline {subsubsection}{\numberline {2.2.1}Original code}{10}
+\contentsline {subsubsection}{\numberline {2.2.2}Improved code}{15}
 \contentsline {section}{\numberline {3}Apendix}{20}
 \contentsline {subsection}{\numberline {3.1}tsp\_ImprovePopulation.m}{20}
 \contentsline {subsection}{\numberline {3.2}run\_ga.m}{21}
