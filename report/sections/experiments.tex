@@ -37,53 +37,38 @@ And, the different values for each modified parameter are:
 
 \subsubsection{Original code}
 
-With the provided representation, adjacency representation, the results of the
-general tests are:
+Due to space limitations, we will limit ourselves to only discuss the results
+of the general tests, while refering to the correspondent graph in the
+appendix. 
 
-\begin{center}
-\includegraphics[width=12cm]{img/xalt_edges/numberIndiv.jpg}
-\end{center}
+When it comes to number of individuals, as expected, a relatively low number
+of individuals does not provide adecuate results, as can be observed by looking
+at the start of the graph (3.13.1). Almost all datasets start in global maximum, and only
+a couple in a local max. However, the majority of them have one of their
+lowest point when the number of individuals is 200 (except for the highest
+dataset, which has it's lowest point at 750) and from that point, it stays
+constant, or even raises, hence it can be said that any number of individuals higher than 200
+would not be benefitial, and actually be just cumbersome when it comes to
+computational cost.
 
-As expected, a relatively low number of individuals does not provide adecuate
-results, as can be observed by looking at the start of the graph. Almost
-all datasets start in global maximum, and only a couple in a local max. However,
-the majority of them have one of their lowest point when the number of
-individuals is 200 (except for the highest dataset, which has it's lowest
-point at 750) and from that point, it stays constant, or even raises, as
-happens with the highest, and third highest dataset, thus it can be said
-that any number of individuals higher than 200 would not be benefitial, and
-actually be just cumbersome when it comes to computational cost. 
+Regarding the number of generations (3.13.2), once again, it is to be expected that a
+low quantity of generations will not yield good results. But that is not the
+only thing the number of individuals and generations have in common, since it
+seems like 200 is one of the best options for the number of generations.
+There are some differences, for instance, at lower quantities of
+generations, there is more fluctuation, and more datasets are positive
+towards higher number of generations. In the specific tests this will be
+further studied, whether 200, or a higher number is better, and whether the
+higher associated computational cost is worth.
 
-\begin{center}
-\includegraphics[width=12cm]{img/xalt_edges/numberGens.jpg}
-\end{center}
-
-Once again, it is to be expected that a low quantity of generations will not
-yield good results. But that is not the only thing the number of
-individuals and generations have in common, since it seems like 200 is one of
-the best options for the number of generations. There are some
-differences, for instance, at lower quantities of generations, there is more
-fluctuation, and more datasets are positive towards higher number of
-generations. In the specific tests this will be further studied, whether
-200, or a higher number is better, and whether the higher
-associated computational cost is worth.
-
-\begin{center}
-\includegraphics[width=12cm]{img/xalt_edges/elitism.jpg}
-\end{center}
-
-When it comes to the percentage of elitism, the results are clearer.
+When it comes to the percentage of elitism (3.13.3), the results are clearer.
 With no exceptions, the lowest value for every single one of the datasets
 is between 0.05 and 0.1, any higher, or any lower, and the distance
 skyrockets, having the highest distances values at elitism = 1. \\
 This phenomena has an easy explanation, the higher the elitism, the more likely it is that the
 algorithm will stay at a local maxima. \\
 
-\begin{center}
-\includegraphics[width=12cm]{img/xalt_edges/crossMut.jpg}
-\end{center}
-
-The test reflects perfectly the balance between exploitation and
+For crossover and mutation (3.13.4), the test reflects perfectly the balance between exploitation and
 exploration, the overall result shows that the best performance comes when
 mutation has a value of 0.5, and crossover 0.5.\\
 Any value of mutation higher than 0.5, and the results start to worsen, because
@@ -94,58 +79,37 @@ the nature of the result makes it necessary to test other values, since,
 \textcolor{red}{we think these results are a bit odd, hence we will further
 study in the specific tests, order to make a conclussion}
 
-
-\subsubsection{Improved code}
+\subsubsection{Modified code}
 
 As explained in the implementation section, the representation we
-implemented is path representation. The results after executing the same
-tests as before are
+implemented is path representation. Again, we will only discuss the
+results, the graphs can be found in the appendix
 
-\begin{center}
-\includegraphics[width=12cm]{img/order_crossover/numberIndiv.jpg}
-\end{center}
-
-Similarly to adjacency representation, the result for the test
+Similarly to adjacency representation, the result for the test (3.13.5)
 of increasing the number of individuals has a generally located minimum local at
 200, although for some cases, the distance becomes constant at 100. The only
-noticeable difference is that it is more stable at lower quantities of
-individuals, and the values for the distances when the number of
+noticeable difference is that the values for the distances when the number of
 individuals is very high (750,100) does not increase, rather it seems to keep
 ever so slightly decreasing.
 
-\begin{center}
-\includegraphics[width=12cm]{img/order_crossover/numberGens.jpg}
-\end{center}
+With regards with number of generations(3.13.6), once again, as expected, there is a number of individuals from which the
+change in the result is almost insignificant. That point, as can be observed, is 200
+individuals, the same as the other representation. One difference is that the
+values obtained from 750 individuals forward is actually worse in some
+cases, if not the same, while with the other representation there were some
+cases in which it improved.
 
-Once again, as expected, there is a number of individuals from which the
-change in the result is null. That point, as can be observed, is 200
-individuals, the same as the other representation. But then again, there
-are differences, two main ones, the first, the change from 50 to 100
-individuals is not so apparent, and the values obtained from 750
-individuals forward is actually worse in some cases, if not the same, while
-with the other representation there were some cases in which it
-improved.
-
-\begin{center}
-\includegraphics[width=12cm]{img/order_crossover/elitism.jpg}
-\end{center}
-
-From what can be observed, there is no doubt that 0.05 is the best
+For the elitism(3.13.7), there is no doubt that 0.05 is the best
 percentage of elitism that can be choosen with this representation. The results
 are somewhat similar to the previous representation, but the slope at the
 latest values (0.5 forward) is not so steep
 
-\begin{center}
-\includegraphics[width=12cm]{img/order_crossover/crossMut.jpg}
-\end{center}
-
-The result of this test is daunting. It was repeated, in case it was somehow
+Lately, the result of the crossover and mutation (3.13.8)  test is daunting. It was repeated, in case it was somehow
 erroneous, but the same graph was obtained. With our representation, there
 seems to be no effect whatsoever on the exploitation vs exploration dilemma.
 \textcolor{red}{It does not matter, apparently, the percentage of mutation
 or crossover}
 \\
-
 
 \subsection{Specific tests}
 
@@ -164,7 +128,7 @@ mutation] = [50,50,5\%,95\%, 5\%\big]
 
 The result obtained is
 
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_1.jpg}
+\includegraphics[width=13cm]{img/specific/xalt_edges/general_1.jpg}
 
 The test was executed in 12.66 sec
 
@@ -172,9 +136,8 @@ The test was executed in 12.66 sec
 The test, keeping all other values, but changing just the number of
 individuals is:
 \\
-\\
 \big[Nind, gens, elitism, crossover, mutation\big] =[200,50,5\%,95\%,5\%] \\
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_2.jpg}\\
+\includegraphics[width=13cm]{img/specific/xalt_edges/general_2.jpg}\\
 We can see that the minimum distance has decreased, from ~64 to ~61, not a
 big decrease, but significant enough. Increasing the number of
 individuals to 200 is then to be considered a good measure. Timewise, the test was executed in 31.61 seconds. More than twice the time for the
@@ -185,15 +148,18 @@ For the next test, this time the number of generations has been
 increased. As previously stated, the best number was 200, but a higher number
 was also suitable for some cases. We tried, respectively, with 200, 750, and
 1000 generations, thus having\\
-\\
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[50,200,5\%,95\%,5\%]\\
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_3.jpg}\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[50,750,50,5\%,95\%,5\%] \\
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_4.jpg}\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[50,1000,5\%,95\%,5\%]\\
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_5.jpg}\\
-\\
+
+\text{\big[50,200,5\%,95\%,5\%\big]}
+\hfill
+\text{\big[50,750,50,5\%,95\%,5\%\big]} \\
+\includegraphics[width=9cm]{img/specific/xalt_edges/general_3.jpg}
+\hfill
+\includegraphics[width=9cm]{img/specific/xalt_edges/general_4.jpg}
+
+\begin{center}
+[50,1000,5\%,95\%,5\%]\\
+\includegraphics[width=13cm]{img/specific/xalt_edges/general_5.jpg}
+\end{center}
 
 We can observe that the result is slightly better, with each increment of
 generations, but the cost is excesive, when it comes to time. The times for the
@@ -206,51 +172,57 @@ no specific test for the elitism. There is, however, for the percentage of
 crossover and mutation. Since the result was a bit unexpected, we did not only
 try with the apparent best result (0.5 percentage of each), but with cases of
 0.2 crossover | 0.8 mutation, and viceversa. The results for the tests are\\
-\\
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] = [50,50,5\%,50\%,50\%] \\
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_6.jpg}\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[50,50,5\%,20\%,80\%] \\
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_7.jpg}\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[50,50,5\%,80\%,20\%] \\
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_8.jpg}\\
-\\
+\newpage
+
+\text{\big[50,50,5\%,50\%,50\%\big]}
+\hfill
+\text{\big[50,50,5,5\%,80\%,20\%\big]} \\
+\includegraphics[width=9cm]{img/specific/xalt_edges/general_6.jpg}
+\hfill
+\includegraphics[width=9cm]{img/specific/xalt_edges/general_7.jpg}
+
+\begin{center}
+[50,50,5\%,80\%,20\%] \\
+\includegraphics[width=13cm]{img/specific/xalt_edges/general_8.jpg}
+\end{center}
+
 The test confirms the results obtained in the general test. The best ratio of
 crossover|mutation is 50\%|50\%, since, out of the 3 configurations, it has the
 best result, while all of them are over the base case. Although not as relevant
 in this case, the times of the tests are equal or even lower than the original, 11.3,
 9.71, 12.92 seconds respectively. \\
-\\
+
 Finally, the combination of the good results is what made them get
 outstanding results. In order to avoid bias, the first combination is just
 modifying the number of individuals, and the number of generations\\
-\\
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] = [200,200,5\%,95\%,5\%] \\
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_6.jpg}\\
+\newpage
+\begin{center}
+[200,200,5\%,95\%,5\%] \\
+\includegraphics[width=13cm]{img/specific/xalt_edges/general_6.jpg}
+\end{center}
 We can see an improvement, even slightly better than those obtained with the
 increase in number of individuals or generations alone. The number of
 generations was choosen to be 200 because we deemed it good enough, and while
-costly, not as costly as higher quantities.\\
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[200,200,5\%,50\%,50\%] \\
-\includegraphics[width=\textwidth]{img/specific/xalt_edges/general_7.jpg}\\
+costly, not as costly as higher quantities.
+\begin{center}
+[200,200,5\%,50\%,50\%] \\
+\includegraphics[width=13cm]{img/specific/xalt_edges/general_7.jpg}
+\end{center}
 And the final result, when combining every single improvement, is the best of
 all. The decrease of distance is ~30.8\%, which could be said to be a great
 decrease. The time spent on this test was 76.74 seconds, around 6.1 times
 more than the original, although high, we consider that it is not
 sufficiently high as to consider it bad. \\
-\\
 
 \subsubsection{Improved code}
 
 The same structure as the previous representation will be followed. One
 parameter at a time will be tested, stating the change, after
 performing a base test
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[50,50,5\%,95\%,5\%]
-
-\includegraphics[width=\textwidth]{img/specific/order_crossover/general_1.jpg}
+\begin{center}
+[50,50,5\%,95\%,5\%]\\
+\includegraphics[width=13cm]{img/specific/order_crossover/general_1.jpg}
+\end{center}
 
 The first noticeable thing that we can observe here is that the distance
 is far higher than the adjacency representation, although looking at the
@@ -260,14 +232,19 @@ We have the same situation that we had with the number of generations in the
 previous representation, but this time with the number of individuals. While
 200 was the amount with the generally lower distances, higher numbers also
 performed somewhat ok. Thus we tested for 200, 1000, and 1250.\\
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[200,50,5\%,95\%,5\%]\\
-\includegraphics[width=\textwidth]{img/specific/order_crossover/general_2.jpg}\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[1000,50,50,5\%,95\%,5\%] \\
-\includegraphics[width=\textwidth]{img/specific/order_crossover/general_3.jpg}\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[1250,50,5\%,95\%,5\%]\\
-\includegraphics[width=\textwidth]{img/specific/order_crossover/general_4.jpg}\\
-\\
+
+\text{\big[200,50,5\%,95\%,5\%\big]}
+\hfill
+\text{\big[1000,50,50\%,95\%,5\%\big]} \\
+\includegraphics[width=9cm]{img/specific/order_crossover/general_2.jpg}
+\hfill
+\includegraphics[width=9cm]{img/specific/order_crossover/general_3.jpg}
+
+\begin{center}
+[1250,50,5\%,95\%,5\%]\\
+\includegraphics[width=13cm]{img/specific/order_crossover/general_4.jpg}
+\end{center}
+
 Although the change is not big, there is improvement, with each increase
 of individuals. And, what's more, as it is individuals, and not
 generations that we are increasnig now, there is higher cost, but not as high.
@@ -278,16 +255,17 @@ will be the one to be tested in the combined test.\\
 \\
 The general test for the number of generations revealed that the best quantity
 was 200.\\
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[50,200,5\%,95\%,5\%]\\
-\includegraphics[width=\textwidth]{img/specific/order_crossover/general_5.jpg}\\
-\\
+\begin{center}
+[50,200,5\%,95\%,5\%]\\
+\includegraphics[width=13cm]{img/specific/order_crossover/general_5.jpg}
+\end{center}
+
 We can observe a slight improvement against the base case, 4 units of
 distance. Timewise, it is much more demanding that increasing
 individuals, since the test took 23.73 seconds to end, ~3.5 times more than the
 base case. Any higher number of generations will only hinder the process
 by making it tediously slow.\\
-\\
+
 As happened in the previous representation tests, the general test for path
 rep. showed that the value 5\% for elitism was without a doubt the best that
 could be set. So, the last to test is crossover and mutation, and here comes the tricky part for this representation. We found in our general
@@ -295,13 +273,13 @@ test that no matter what the percentage for mutation or crossover was being
 tested, the results were almost independant from them. So, given that the base
 case already tested for a high crossover, and low mutation, the designed
 tests are, for low crossover and high mutation, and for a 50|50. \\
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[50,200,5\%,50\%,50\%]\\
-\includegraphics[width=\textwidth]{img/specific/order_crossover/general_6.jpg}\\
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[50,200,5\%,50\%,50\%]\\
-\includegraphics[width=\textwidth]{img/specific/order_crossover/general_7.jpg}\\
-\\
+\text{\big[50,200,5\%,10\%,90\%\big]}
+\hfill
+\text{\big[50,200,5\%,50\%,50\%\big]} \\
+\includegraphics[width=9cm]{img/specific/order_crossover/general_6.jpg}
+\hfill
+\includegraphics[width=9cm]{img/specific/order_crossover/general_7.jpg}
+
 Although somewhat better than the base case, the result from one test to the
 other differ so little that it confirms the result of the general test, stating
 that, for this represention, given our implementation with our
@@ -311,10 +289,11 @@ test are 50\%|50\%. Obviosly, as the number of indviduals or
 generations did not change, the time is almost identical to the base case\\
 \\
 For the combined test, in hope to get the best result, this is the test made\\
-\\
-\big[Nind, gens, elitism, crossover, mutation\big] =[1250,200,5\%,50\%,50\%]\\
-\includegraphics[width=\textwidth]{img/specific/order_crossover/general_7.jpg}\\
-\\
+\begin{center}
+[1250,200,5\%,50\%,50\%]\\
+\includegraphics[width=13cm]{img/specific/order_crossover/general_7.jpg}
+\end{center}
+
 Unlike the previous combined test, the big expected improvement is nowhere
 to be seen. Going from a length of 127 to 120 is just a mere ~5.2\% of
 decrease. Furthermore, the combined increase of individuals and
