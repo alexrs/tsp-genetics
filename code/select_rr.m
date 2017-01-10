@@ -39,10 +39,19 @@ function SelCh = select_rr(SEL_F, Chrom, FitnV, mu)
     
     %Select q random individuals
     q = zeros(10,1);
+    temp = zeros(10,1);
     for i=1:10
         ind = randi(size(Chrom,1)) ;
+        
+        %Avoid repetition
+        while(any(ind==temp))
+            ind=randi(size(Chrom,1)) ;
+        end
+        
+        temp(i) = ind;
         q(i) = FitnV(ind); 
     end
+    
     
     %Tournament variable, only index and amount of wins is stored
     tournament = zeros(size(Chrom,1),2);

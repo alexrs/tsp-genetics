@@ -2,10 +2,12 @@
 %{
 Modifications: 
 
-run_ga_t --> Now returns a value, minimun, and does not use
-the function visualizeTSP (line ~56). 
+run_ga_test --> Now returns a value, minimun, does not use
+the function visualizeTSP (line ~56), and takes into account which 
+crossover operator is used, and whether the selection for the new offspring
+is elitism or roundrobin tournament
 
-tspgui_t --> Now runs automatically the test with the first citis 
+tspgui_test --> Now runs automatically the test with the benchmark bcl380 
 configuration, saves and closes the figure
 
 test --> There are 2 sets of tests. First, specific tests, limited in
@@ -16,7 +18,9 @@ components to be changed (aka: number of individuals, number of
 generations, elitism, and percentage of crossover and mutation), with all 
 the datasets. Each test is made with a certain number of values, 
 repeated *reps* (variable in the code, currently set to 5) times, and the 
-mean obtained by that is the value we use for the plots. 
+mean obtained by that is the value we use for the plots.
+
+
 %}
 %%%%
 
@@ -28,6 +32,10 @@ if ~exist('tests', 'dir')
   mkdir('tests');
 end
 
+
+%Options for Crossover (depending on the crossover, a representation will
+%be choosen
+
 %CROSSOVER = 'order_crossover';
 %CROSSOVER = 'xalt_edges';
 
@@ -37,55 +45,45 @@ end
 % 3 for both
 %perform_tests(3, CROSSOVER);
 
-
-%Testing optional
-datasetslist = dir('datasets/');
-datasets=cell( size(datasetslist,1)-2,1);
-for i=1:size(datasets,1)
-    datasets{i} = datasetslist(i+2).name;
-end
-data = load(['datasets/' datasets{1}]);
-x=data(:,1)/max([data(:,1);data(:,2)]);
-y=data(:,2)/max([data(:,1);data(:,2)]);
-NVAR=size(data,1);
-NIND=50;		% Number of individuals
-MAXGEN=100;		% Maximum no. of generations
-NVAR=26;		% No. of variables
-PRECI=1;		% Precision of variables
-ELITIST=15;    % percentage of the elite population
-STOP_PERCENTAGE=.95;    % percentage of equal fitness individuals for stopping
-PR_CROSS=.95;     % probability of crossover
-PR_MUT=.05;       % probability of mutation
-LOCALLOOP=0;      % local loop removal
-CROSSOVER = 'order_crossover';  % default crossover operator
-
-run_ga(x,y,NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, ...
-    PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP)
-
+perform_optest();
 
 function perform_tests(n, CROSSOVER)
     if ~exist(strcat('tests/',CROSSOVER), 'dir')
         mkdir(strcat('tests/',CROSSOVER));    
     end
 
+    %Specific test
     if(n==1 || n==3)
         
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        NIND=[50,150,50,50,50,50,100,150];		% Number of individuals
-        MAXGEN=[100,100,300,100,100,100,100,150];		% Maximum no. of generations
-        ELITIST=[0.05,0.05,0.05,0.05,0.05,0.3,0.2,0.1];    % perce ntage of the elite population
-        PR_CROSS=[.95,.95,.95,.80,.20,.95,.85,.2];     % probability of crossover
-        PR_MUT=[.05,.05,.05,.2,.8,.05,.15,.8];       % probability of mutation
-        LOCALLOOP=1;      % local loop removal
-        
-        %Name of tests
-        name = {'base','higherComputCost_1','higherComputCost_2',...
-                'exploVexplo_1','exploVexplo_2'...
-                'theBest', 'mix', 'mix_2'};
+        %Depending on the representation (crossover choosen), the data 
+        % for the specific test is choosen
+        if(strcmp(CROSSOVER,'order_crossover'))
+            
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            NIND=    [50,200,1000,1250,50,50,50,1250];		
+            MAXGEN=  [50,50,50,50,200,50,50,200];		
+            ELITIST=0.05;    
+            PR_CROSS=[.95,.95,.95,.95,.95,.1,.5,.5,.5];     
+            PR_MUT=  [.05,.05,.05,.05,.05,.9,.5,.5];       
+            LOCALLOOP=1;      
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        else
+            
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            NIND=    [50,200,50,50,50,50,50,50,200,200];		
+            MAXGEN=  [50,50,200,750,1000,50,50,50,200,200];		
+            ELITIST=0.05;    
+            PR_CROSS=[.95,.95,.95,.95,.95,.5,.20,.80,.95,.5];     
+            PR_MUT=  [.05,.05,.05,.05,.05,0.5,.8,.2,.05,.5];       
+            LOCALLOOP=1;      
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-        upbound = size(name);
+        end
+       
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        upbound = size(NIND);
         for i=1:upbound(2)
             tspgui_test(CROSSOVER, NIND(i), MAXGEN(i),ELITIST(i), ...
             PR_CROSS(i),PR_MUT(i),LOCALLOOP, ...
@@ -94,19 +92,20 @@ function perform_tests(n, CROSSOVER)
         
     end %end if(n==1 || n==3)
     
+    %General tests
     if(n==2 || n==3)
         
         reps = 5;
         
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        NIND=[50,100,150,200,500,750,1000];		% Number of individuals
-        MAXGEN=[50,100,150,200,500,750,1000];		% Maximum no. of generations
-        ELITIST=[0,0.05, 0.1, 0.25, 0.5, 0.75, 1] ;    % percentage of the elite population
-        STOP_PERCENTAGE=.95;    % percentage of equal fitness individuals for stopping
-        PR_CROSS=[0, 0.05, 0.1, 0.25, 0.5, 0.75, 1];     % probability of crossover
-        PR_MUT=[1,0.95, 0.9, 0.75, 0.5, 0.25, 0];       % probability of mutation
-        LOCALLOOP=1;      % local loop removal
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        NIND=[50,100,150,200,500,750,1000];		
+        MAXGEN=[50,100,150,200,500,750,1000];		
+        ELITIST=[0,0.05, 0.1, 0.25, 0.5, 0.75, 1] ;    
+        STOP_PERCENTAGE=.95;    
+        PR_CROSS=[0, 0.05, 0.1, 0.25, 0.5, 0.75, 1];     
+        PR_MUT=[1,0.95, 0.9, 0.75, 0.5, 0.25, 0];       
+        LOCALLOOP=1;      
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         
         datasetslist = dir('datasets/');
         datasets=cell( size(datasetslist,1)-2 ,1);
@@ -174,10 +173,8 @@ function perform_tests(n, CROSSOVER)
                 
              
             end %for i=1:size(datasets,1);
-        %values
         end %for n=1,size(NIND)
         
-        %values
         
         %Plots
         %Number of indv plot
@@ -223,5 +220,33 @@ function perform_tests(n, CROSSOVER)
         saveas(porcF, strcat('tests/',CROSSOVER, '/crossMut'), 'jpg');
         close(porcF);
         
-    end %if
+    end %if (n==2 || n==3)
+end %end of function
+
+function perform_optest()
+
+    %Testing optional
+    datasetslist = dir('datasets/');
+    datasets=cell( size(datasetslist,1)-2,1);
+    for i=1:size(datasets,1)
+    datasets{i} = datasetslist(i+2).name;
+    end
+    data = load(['datasets/' datasets{1}]);
+    x=data(:,1)/max([data(:,1);data(:,2)]);
+    y=data(:,2)/max([data(:,1);data(:,2)]);
+
+    NVAR=size(data,1);
+    NIND=50;		% Number of individuals
+    MAXGEN=100;		% Maximum no. of generations
+    NVAR=26;		% No. of variables
+    SELECTION=15;    % Number of indv to be selected after tournament
+    STOP_PERCENTAGE=.95;    % percentage of equal fitness individuals for stopping
+    PR_CROSS=.95;     % probability of crossover
+    PR_MUT=.05;       % probability of mutation
+    LOCALLOOP=0;      % local loop removal
+    CROSSOVER = 'order_crossover';  % default crossover operator
+
+    val = run_ga_test(1,x,y,NIND, MAXGEN, NVAR, SELECTION, STOP_PERCENTAGE, ...
+    PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP);
+    display(val);
 end

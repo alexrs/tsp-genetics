@@ -1,4 +1,4 @@
-function minimum=run_ga_test(modality, x, y, NIND, MAXGEN, NVAR, ELITIST, ...
+function minimum=run_ga_test(modality, x, y, NIND, MAXGEN, NVAR, SELECTION, ...
     STOP_PERCENTAGE, PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP)
 % usage: run_ga(x, y,
 %               NIND, MAXGEN, NVAR,
@@ -17,10 +17,13 @@ function minimum=run_ga_test(modality, x, y, NIND, MAXGEN, NVAR, ELITIST, ...
 % CROSSOVER: the crossover operator
 % calculate distance matrix between each pair of cities
 % ah1, ah2, ah3: axes handles to visualise tsp
-{NIND MAXGEN NVAR ELITIST STOP_PERCENTAGE PR_CROSS PR_MUT CROSSOVER LOCALLOOP};
+{modality NIND MAXGEN NVAR SELECTION STOP_PERCENTAGE PR_CROSS PR_MUT CROSSOVER LOCALLOOP};
 
 
-        GGAP = 1 - ELITIST;
+        if (SELECTION<=1 && SELECTION>=0)
+            GGAP = 1 - SELECTION;
+        end
+ 
         mean_fits=zeros(1,MAXGEN+1);
         worst=zeros(1,MAXGEN+1);
         Dist=zeros(NVAR,NVAR);
@@ -66,7 +69,12 @@ function minimum=run_ga_test(modality, x, y, NIND, MAXGEN, NVAR, ELITIST, ...
         	%assign fitness values to entire population
         	FitnV=ranking(ObjV);
         	%select individuals for breeding
-        	SelCh=select('sus', Chrom, FitnV, GGAP);
+        	if (SELECTION <=1)
+                SelCh=select('sus', Chrom, FitnV, SELECTION);
+            else
+                SelCh=select_rr('sus', Chrom, FitnV, SELECTION);
+            end
+            
         	%recombine individuals (crossover)
             SelCh = recombin(CROSSOVER,SelCh,PR_CROSS);
             

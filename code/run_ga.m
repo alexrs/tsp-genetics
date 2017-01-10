@@ -25,7 +25,7 @@ function run_ga(x, y, NIND, MAXGEN, NVAR, SELECTION, STOP_PERCENTAGE, PR_CROSS, 
 {NIND MAXGEN NVAR SELECTION STOP_PERCENTAGE PR_CROSS PR_MUT CROSSOVER LOCALLOOP};
 
         tic;
-        if (SELECTION<1 && SELECTION>0)
+        if (SELECTION<=1 && SELECTION>=0)
             GGAP = 1 - SELECTION;
         end
         mean_fits=zeros(1,MAXGEN+1);
@@ -70,8 +70,11 @@ function run_ga(x, y, NIND, MAXGEN, NVAR, SELECTION, STOP_PERCENTAGE, PR_CROSS, 
         	%assign fitness values to entire population
         	FitnV=ranking(ObjV);
         	%select individuals for breeding
-        	SelCh=select_rr('sus', Chrom, FitnV, SELECTION);
-        	
+            if (SELECTION <=1)
+                SelCh=select('sus', Chrom, FitnV, SELECTION);
+            else
+                SelCh=select_rr('sus', Chrom, FitnV, SELECTION);
+            end
             %recombine individuals (crossover)
             SelCh = recombin(CROSSOVER,SelCh,PR_CROSS);
             %SelCh=mutateTSP('inversion',SelCh,PR_MUT);

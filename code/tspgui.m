@@ -6,8 +6,21 @@ NIND=50;		% Number of individuals
 MAXGEN=100;		% Maximum no. of generations
 NVAR=26;		% No. of variables
 PRECI=1;		% Precision of variables
-ELITIST=16;    % percentage of the elite population
-GGAP=1-ELITIST;		% Generation gap
+SELECTION=15;    % percentage of the elite population
+
+if(SELECTION<=1)
+    GGAP=1-SELECTION;		% Generation gap
+    sliderTxt='% elite';
+    maxSlider=100;
+    minSlider=0;
+    val=round(SELECTION*100);
+else
+    sliderTxt='# indviduals';
+    maxSlider=NIND;
+    minSlider=10;
+    val=round(SELECTION);
+end
+
 STOP_PERCENTAGE=.95;    % percentage of equal fitness individuals for stopping
 PR_CROSS=.95;     % probability of crossover
 PR_MUT=.05;       % probability of mutation
@@ -92,9 +105,9 @@ mutsliderv = uicontrol(ph,'Style','text','String',round(PR_MUT*100),'Position',[
 crossslidertxt = uicontrol(ph,'Style','text','String','Pr. Crossover','Position',[0 110 130 20]);
 crossslider = uicontrol(ph,'Style','slider','Max',100,'Min',0,'Value',round(PR_CROSS*100),'Sliderstep',[0.01 0.05],'Position',[130 110 150 20],'Callback',@crossslider_Callback);
 crosssliderv = uicontrol(ph,'Style','text','String',round(PR_CROSS*100),'Position',[280 110 50 20]);
-elitslidertxt = uicontrol(ph,'Style','text','String','% elite','Position',[0 80 130 20]);
-elitslider = uicontrol(ph,'Style','slider','Max',100,'Min',0,'Value',round(ELITIST*100),'Sliderstep',[0.01 0.05],'Position',[130 80 150 20],'Callback',@elitslider_Callback);
-elitsliderv = uicontrol(ph,'Style','text','String',round(ELITIST*100),'Position',[280 80 50 20]);
+elitslidertxt = uicontrol(ph,'Style','text','String',sliderTxt,'Position',[0 80 130 20]);
+elitslider = uicontrol(ph,'Style','slider','Max',maxSlider,'Min',minSlider,'Value',val,'Sliderstep',[0.01 0.05],'Position',[130 80 150 20],'Callback',@elitslider_Callback);
+elitsliderv = uicontrol(ph,'Style','text','String',val,'Position',[280 80 50 20]);
 crossover = uicontrol(ph,'Style','popupmenu', 'String',{'order_crossover'}, 'Value',1,'Position',[10 50 130 20],'Callback',@crossover_Callback);
 %inputbutton = uicontrol(ph,'Style','pushbutton','String','Input','Position',[55 10 70 30],'Callback',@inputbutton_Callback);
 runbutton = uicontrol(ph,'Style','pushbutton','String','START','Position',[0 10 50 30],'Callback',@runbutton_Callback);
@@ -162,8 +175,12 @@ set(fh,'Visible','on');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(elitsliderv,'String',slider_value);
-        ELITIST = round(slider_value)/100;
-        GGAP = 1-ELITIST;
+        if(SELECTION<=1)
+            SELECTION = round(slider_value)/100;
+            GGAP = 1-SELECTION;
+        else
+            SELECTION = round(slider_value);
+        end
     end
     function crossover_Callback(hObject,~)
         crossover_value = get(hObject,'Value');
@@ -178,7 +195,7 @@ set(fh,'Visible','on');
         set(mutslider,'Visible','off');
         set(crossslider,'Visible','off');
         set(elitslider,'Visible','off');
-        run_ga(x, y, NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP, ah1, ah2, ah3);
+        run_ga(x, y, NIND, MAXGEN, NVAR, SELECTION, STOP_PERCENTAGE, PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP, ah1, ah2, ah3);
         end_run();
     end
     function inputbutton_Callback(~,~)
