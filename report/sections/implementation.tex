@@ -1,260 +1,62 @@
 \section{Implementation}
-    - Path representation
-    - Order Crossover ( http://www.dca.fee.unicamp.br/~gomide/courses/EA072/artigos/Genetic_Algorithm_TSPR_eview_Larranaga_1999.pdf )
-    - Insertion mutation ( http://mnemstudio.org/genetic-algorithms-mutation.htm )
 
-tsp_ImprovePopulation.m
+\subsection{Representation}
+The original code employed adjacency representation. In adjacency representation a tour is represented as a list of \textit{n} cities where city \textit{j} is listed in position \textit{i} if and only if the tour leads from city \textit{i} to city \textit{j}. Thus, the list:\\
+\\
+\centerline{(7 6 8 5 3 4 2 1)}\\
+\\
+represents the tour:\\ 
+\\
+\centerline{3-8-1-7-2-6-4-5}\footnote{This explanation can be found in the slides about Traveling Salesman Problem}\\
+\\ 
+In our implementation, we have decided to use path representation. Path representation is the most natural way of representing a tour. This can be easily seen with the following example. The list:
+\\
+\centerline{(1 2 7 5 6 3 4)}\\
+\\
+represents the path\\
+\centerline{1-2-7-5-6-3-4}\\
+\\
+It was also the simplest representation possible for this problem, and it was easy to implement, as the tour was first encoded in path representation, and then translated to adjancency representation using the function \texttt{path2adj}. Finally, it was translated again to path representation to be used in the plots with the function \texttt{adj2path}. 
 
-function newpop = tsp_ImprovePopulation(popsize, ncities, pop, improve,dists)
+\subsection{Crossover}
+  The new representation required a new crossover operator. The available options were:
+  \begin{itemize}
+  	\item Partially Matched Crossover (PMX)
+  	\item Order Crossover (OX)
+  	\item Cyclic Crossover (CX)
+  	\item Edge Recombination Crossover (ERX)
+  \end{itemize}
 
-if (improve)
-   for i=1:popsize
-     
-     \textbf{result = improve_path(ncities, pop(i,:),dists);}
-  
-     pop(i,:) = path2adj(result);
+  The one selected is Order Crossover. This crossover exploits a property of the path representation, that the order of the cities (not their positions) are important. It construct an offspring by choosing a subtour of one parent and preserving the relative order of cities of the other parent.
+  Let's consider the following tours:
+  \\
+\centerline{(1 2 3 4 5 6 7 8)}\\
+\centerline{(2 4 6 8 7 5 3 1)}\\
+\\
+If we choose the cut point between the second and the third city, and the second cut point between the fifth and the sixth, we have:\\
+\centerline{(1 2 | 3 4 5 | 6 7 8)}\\
+\centerline{(2 4 | 6 8 7 | 5 3 1)}\\
 
-   end
-end
+And the offspring is created copying the segments between the cut points, and then, starting from the second cut points of one parent, the rest of the cities are copied in the order in which they appear in the other parent, giving: \\
+\centerline{(8 7 | 3 4 5 | 1 2 6)}\\
+\centerline{(4 5 | 6 8 7 | 1 2 3)}\\
 
-newpop = pop;
+\subsection{Mutation}
+We were also asked to implement a new mutation operator. For this task, multiple and different options where available, such as Exchange Mutation, Scramble Mutation, Displacement Mutation or Insertion Mutation.
+As the crossover operator chosen exploits the order property aforementioned, we decided that the mutation should break this order in some way to avoid reaching a local optima due to the lack of diversity in the order.
 
-
-run_ga.m
-
-{NIND MAXGEN NVAR ELITIST STOP_PERCENTAGE PR_CROSS PR_MUT CROSSOVER LOCALLOOP};
-
-        GGAP = 1 - ELITIST;
-        mean_fits=zeros(1,MAXGEN+1);
-        worst=zeros(1,MAXGEN+1);
-        Dist=zeros(NVAR,NVAR);
-        for i=1:size(x,1)
-            for j=1:size(y,1)
-                Dist(i,j)=sqrt((x(i)-x(j))^2+(y(i)-y(j))^2);
-            end
-        end
-        % initialize population
-        Chrom=zeros(NIND,NVAR);
-        for row=1:NIND
-            \textbf{Chrom(row,:)=randperm(NVAR);}
-        end
-        gen=0;
-        % number of individuals of equal fitness needed to stop
-        stopN=ceil(STOP_PERCENTAGE*NIND);
-        % evaluate initial population
-        ObjV = tspfun(Chrom,Dist);
-        best=zeros(1,MAXGEN);
-        % generational loop
-        while gen<MAXGEN
-            sObjV=sort(ObjV);
-          	best(gen+1)=min(ObjV);
-        	minimum=best(gen+1);
-            mean_fits(gen+1)=mean(ObjV);
-            worst(gen+1)=max(ObjV);
-            for t=1:size(ObjV,1)
-                if (ObjV(t)==minimum)
-                    break;
-                end
-            end
-            
-            \textbf{visualizeTSP(x,y,Chrom(t,:), minimum, ah1, gen, best, mean_fits, worst, ah2, ObjV, NIND, ah3);}
-
-            if (sObjV(stopN)-sObjV(1) <= 1e-15)
-                  break;
-            end          
-        	%assign fitness values to entire population
-        	FitnV=ranking(ObjV);
-        	%select individuals for breeding
-        	SelCh=select('sus', Chrom, FitnV, GGAP);
-        	%recombine individuals (crossover)
-            SelCh = recombin(CROSSOVER,SelCh,PR_CROSS);
-            \textbf{SelCh=mutateTSP('insertion',SelCh,PR_MUT); % <-- line changed, now insertion mutation is used}
-            %evaluate offspring, call objective function
-        	ObjVSel = tspfun(SelCh,Dist);
-            %reinsert offspring into population
-        	[Chrom, ObjV]=reins(Chrom,SelCh,1,1,ObjV,ObjVSel);
-            
-            Chrom = tsp_ImprovePopulation(NIND, NVAR, Chrom,LOCALLOOP,Dist);
-        	%increment generation counter
-        	gen=gen+1;            
-        end
-end
+The mutation operator selected for this problem is insertion mutation due to its simplicity and effectiveness. This mutation works in the following way. Imagine that we have the path:
+\\
+\centerline{0 1 \textbf{2} 3 4 5 6 7}\\
+\\
+Take the 2 out of the sequence,
+\\
+\centerline{0 1 3 4 5 6 7}\\
+\\
+and reinsert the 2 at a randomly chosen position:
+\\
+\centerline{0 1 3 4 5 \textbf{2} 6 7}\\
 
 
-insertion.m
-
-% low level function for TSP mutation
-% Representation is an integer specifying which encoding is used
-%	1 : adjacency representation
-%	2 : path representation
-%
-
-function NewChrom = insertion(OldChrom)
-
-    NewChrom = OldChrom;
-    % select two positions in the tour
-    rndi = zeros(1,2);
-    while rndi(1) == rndi(2)
-        rndi=rand_int(1,2,[1 size(NewChrom,2)]);
-    end
-    rndi = sort(rndi);
-    
-    % get the value of the first random position
-    temp = NewChrom(rndi(1));
-    % insert this value in the second random position
-    NewChrom = insertAt(NewChrom, temp, rndi(2));
-    % remove the first random position
-    NewChrom(rndi(1)) = [];
-    % End of function
-end
-
-function arrOut = insertAt(arr,val,index)
-    if index == numel(arr)+1
-        arrOut = [arr val];
-    else
-        arrOut = [arr(1:index-1) val arr(index:end)];
-    end
-end
-
-order_crossover.m
-
-% Syntax:  NewChrom = order_crossover(OldChrom, XOVR)
-%
-% Input parameters:
-%    OldChrom  - Matrix containing the chromosomes of the old
-%                population. Each line corresponds to one individual
-%                (in any form, not necessarily real values).
-%    XOVR      - Probability of recombination occurring between pairs
-%                of individuals.
-%
-% Output parameter:
-%    NewChrom  - Matrix containing the chromosomes of the population
-%                after mating, ready to be mutated and/or evaluated,
-%                in the same format as OldChrom.
-%
-
-function NewChrom = order_crossover(OldChrom, XOVR)
-
-if nargin < 2, XOVR = NaN; end
-[rows,~]=size(OldChrom);
-   
-   maxrows=rows;
-   if rem(rows,2)~=0
-	   maxrows=maxrows-1;
-   end
-   
-   for row=1:2:maxrows
-	
-    % crossover of the two chromosomes
-   	% results in 2 offsprings
-	if rand<XOVR			% recombine with a given probability
-        MatrixChrom = order_low_level([OldChrom(row,:);OldChrom(row+1,:)]);
-		NewChrom(row,:) = MatrixChrom(1, :);
-		NewChrom(row+1,:) = MatrixChrom(2, :);
-	else
-		NewChrom(row,:) = OldChrom(row,:);
-		NewChrom(row+1,:) = OldChrom(row+1,:);
-	end
-   end
-
-   if rem(rows,2) ~= 0
-	   NewChrom(rows,:)=OldChrom(rows,:);
-   end
-
-% End of function
-
-order_low_level.m
-
-% low level function for calculating an offspring
-% given 2 parent in the Parents - agrument
-% Parents is a matrix with 2 rows, each row
-% represent the genocode of the parent
-%
-% Returns a matrix containing the offspring
-
-
-function Offspring=order_low_level(Parents)
-
-    cols = size(Parents,2);
-
-    Offspring=zeros(2,cols);
-
-    start_index = rand_int(1, 1, [1, cols - 1]);
-    end_index = rand_int(1, 1, [start_index + 1, cols]);
-
-    Offspring(1, start_index:end_index) = Parents(1, start_index:end_index);
-    Offspring(2, start_index:end_index) = Parents(2, start_index:end_index);
-
-
-    for off=1:2
-        % Create aux matrix to check the parent that has not been copied a segment
-        Buff = Parents(off,:);
-
-        members = ismember(Buff, Offspring(off, :));
-
-        % Take only the values from aux different to zero (the values not copied in the offspring)
-
-        Buff = Buff(members == 0);
-
-        %Copy not used values in the offspring in the order they appear in the second parent (or first for the second round)
-
-        % From second crossover point to the end of the vector
-        
-        Offspring(off, end_index+1:end) = Buff(start_index:end);
-        Offspring(off, 1:start_index - 1) = Buff(1:start_index - 1);
-    end
-% end function
-
-tspgui.m
-
-\textbf{CROSSOVER = 'order_crossover';  % default crossover operator}
-\textbf{crossover = uicontrol(ph,'Style','popupmenu', 'String',{'order_crossover'}, 'Value',1,'Position',[10 50 130 20],'Callback',@crossover_Callback);}
-
-tspfun.m
-
-%
-% ObjVal = tspfun(Phen, Dist)
-% Implementation of the TSP fitness function
-%	Phen contains the phenocode of the matrix coded in path
-%	representation
-%	Dist is the matrix with precalculated distances between each pair of cities
-%	ObjVal is a vector with the fitness values for each candidate tour 
-%   (=each row of Phen)
-%
-
-function ObjVal = tspfun(Phen, Dist)
-    % the objective function works with adjacency representation. In this
-    % version, path representation is used, so the fitness function should
-    % be adapted. Now, the phenotype is converted to adjacency
-    % representation first, and then, the Objective Value is computed as it
-    % was computed in the original version.
-    adj = zeros(size(Phen));
-    for row=1:size(Phen)
-       adj(row,:) = path2adj(Phen(row,:));
-    end
-    
-    ObjVal = Dist(adj(:,1), 1);
-	for t=2:size(adj,2)  
-    	ObjVal=ObjVal + Dist(adj(:,t), t);
-	end
-
-% End of function
-
-mutateTSP.m
-
-function NewChrom = mutateTSP(MUT_F, OldChrom, MutOpt)
-
-% Check parameter consistency
-   if nargin < 2,  error('Not enough input parameters'); end
-
-[rows,~]=size(OldChrom);
-NewChrom=OldChrom;
-
-for r=1:rows
-	if rand<MutOpt
-		\textbf{NewChrom(r,:) = feval(MUT_F, OldChrom(r,:));}
-	end
-end
-
-% End of function
-
+\subsection{Fitness Function}
+The fitness function has been changed as the original one worked with adjacency representation. The simplest way to adapt the old function to the new representation was using \texttt{path2adj}, converting the path to adjacency representation, and then computing the fitness in the same way as it was computed before.

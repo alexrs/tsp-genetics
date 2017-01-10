@@ -31,6 +31,7 @@ end
 %CROSSOVER = 'order_crossover';
 %CROSSOVER = 'xalt_edges';
 
+
 % 1 for specific tests (limited tests, with graph saving)
 % 2 for benchmark (obtain just the distance)
 % 3 for both
@@ -60,7 +61,6 @@ CROSSOVER = 'order_crossover';  % default crossover operator
 
 run_ga(x,y,NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, ...
     PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP)
-
 
 
 function perform_tests(n, CROSSOVER)
@@ -114,7 +114,7 @@ function perform_tests(n, CROSSOVER)
         upbound = size(NIND);
         modality = 0;
         
-        if (CROSSOVER == 'order_crossover')
+        if (strcmp(CROSSOVER,'order_crossover'))
             modality=1;
         end
         

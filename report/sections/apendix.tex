@@ -1,0 +1,39 @@
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+
+
+\section{Apendix}
+
+\lstset{language=Matlab,
+    breaklines=true,
+    commentstyle=\color{mygreen},
+    numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+    numbersep=5pt,                   % how far the line-numbers are from the code
+    numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+    rulecolor=\color{black},
+    tabsize=2, 
+    }          % Set your language (you can change the language for each code-block optionally)
+
+\subsection{tsp\_ImprovePopulation.m}
+\lstinputlisting[frame=single]{../code/tsp_ImprovePopulation.m}
+\subsection{run\_ga.m}
+\lstinputlisting[frame=single]{../code/run_ga.m}
+\subsection{insertion.m}
+\lstinputlisting[frame=single]{../code/insertion.m}
+\subsection{order\_crossover.m}
+\lstinputlisting[frame=single]{../code/order_crossover.m}
+\subsection{order\_low\_level.m}
+\lstinputlisting[frame=single]{../code/order_low_level.m}
+\subsection{tspgui.m}
+    \begin{lstlisting}[frame=single]
+    CROSSOVER = 'order_crossover';
+    crossover = uicontrol(ph,'Style','popupmenu', 'String',{'order_crossover'}, 'Value',1,'Position',[10 50 130 20],'Callback',@crossover_Callback);
+    \end{lstlisting}
+\subsection{tspfun.m}
+\lstinputlisting[frame=single]{../code/tspfun.m}
+\subsection{mutateTSP.m}
+\lstinputlisting[frame=single]{../code/mutateTSP.m}
+
+
+% End of function
+
