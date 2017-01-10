@@ -70,7 +70,7 @@ function SelCh = select_rr(SEL_F, Chrom, FitnV, mu)
     
     %Indexes of the mu better individuals
     indexes = sortedTournament(size( ...
-        sortedTournament,1)-mu:size(sortedTournament,1),1);
+        sortedTournament,1)-mu+1:size(sortedTournament,1),1);
     
     
     SelCh = [];

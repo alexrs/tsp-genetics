@@ -236,17 +236,23 @@ function perform_optest()
     y=data(:,2)/max([data(:,1);data(:,2)]);
 
     NVAR=size(data,1);
+    
     NIND=50;		% Number of individuals
-    MAXGEN=100;		% Maximum no. of generations
-    NVAR=26;		% No. of variables
-    SELECTION=15;    % Number of indv to be selected after tournament
-    STOP_PERCENTAGE=.95;    % percentage of equal fitness individuals for stopping
+    MAXGEN=50;		% Maximum no. of generations
+    SELECTION=[10,15,30,45,50];    % Number of indv to be selected after tournament
     PR_CROSS=.95;     % probability of crossover
     PR_MUT=.05;       % probability of mutation
     LOCALLOOP=0;      % local loop removal
     CROSSOVER = 'order_crossover';  % default crossover operator
+    
+    upbound = size(SELECTION);
+    for i=1:upbound(2)
+        tspgui_test(CROSSOVER, NIND, MAXGEN,SELECTION(i), ...
+        PR_CROSS,PR_MUT,LOCALLOOP, ...
+            strcat( 'tests/optional_',num2str(i) ) );
+    end
 
-    val = run_ga_test(1,x,y,NIND, MAXGEN, NVAR, SELECTION, STOP_PERCENTAGE, ...
-    PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP);
-    display(val);
+    %val = run_ga_test(1,x,y,NIND, MAXGEN, NVAR, SELECTION, STOP_PERCENTAGE, ...
+    %PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP);
+    %display(val);
 end

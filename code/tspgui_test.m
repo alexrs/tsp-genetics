@@ -1,20 +1,22 @@
-%Change in lines 49-75, and 106
-
-function tspgui_test(CROSSOVER, NIND, MAXGEN,ELITIST,PR_CROSS,PR_MUT,LOCALLOOP, testName)
+function tspgui_test(CROSSOVER, NIND, MAXGEN,SELECTION,PR_CROSS,PR_MUT, ...
+    LOCALLOOP, testName)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%NIND=50;		% Number of individuals
-%MAXGEN=100;		% Maximum no. of generations
-NVAR=26;		% No. of variables
-PRECI=1;		% Precision of variables
-%ELITIST=0.05;    % percentage of the elite population
-GGAP=1-ELITIST;		% Generation gap
+if(SELECTION<=1)
+    GGAP=1-SELECTION;		% Generation gap
+    sliderTxt='% elite';
+    maxSlider=100;
+    minSlider=0;
+    val=round(SELECTION*100);
+else
+    sliderTxt='# indviduals';
+    maxSlider=NIND;
+    minSlider=10;
+    val=round(SELECTION);
+end
+
 STOP_PERCENTAGE=.95;    % percentage of equal fitness individuals for stopping
-%PR_CROSS=.95;     % probability of crossover
-%PR_MUT=.05;       % probability of mutation
-%LOCALLOOP=1;      % local loop removal
-%CROSSOVER = 'xalt_edges';  % default crossover operator
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % read an existing population
@@ -59,8 +61,6 @@ x=data(:,1)/max([data(:,1);data(:,2)]);
 y=data(:,2)/max([data(:,1);data(:,2)]);
 NVAR=size(data,1);
 
-%datasets
-
 % initialise the user interface
 fh = figure('Visible','off','Name','TSP Tool','Position',[0,0,1024,768]);
 ah1 = axes('Parent',fh,'Position',[.1 .55 .4 .4]);
@@ -79,7 +79,7 @@ ph = uipanel('Parent',fh,'Title','Settings','Position',[.55 .05 .45 .45]);
 datasetpopuptxt = uicontrol(ph,'Style','text','String','Dataset','Position',[0 260 130 20]);
 datasetpopup = uicontrol(ph,'Style','popupmenu','String',datasets,'Value',1,'Position',[130 260 130 20],'Callback',@datasetpopup_Callback);
 llooppopuptxt = uicontrol(ph,'Style','text','String','Loop Detection','Position',[260 260 130 20]);
-llooppopup = uicontrol(ph,'Style','popupmenu','String',{'off','on'},'Value',1,'Position',[390 260 50 20],'Callback',@llooppopup_Callback);
+llooppopup = uicontrol(ph,'Style','popupmenu','String',{'off','on'},'Value',1,'Position',[390 260 50 20],'Callback',@llooppopup_Callback); 
 ncitiesslidertxt = uicontrol(ph,'Style','text','String','# Cities','Position',[0 230 130 20]);
 %ncitiesslider = uicontrol(ph,'Style','slider','Max',128,'Min',4,'Value',NVAR,'Sliderstep',[0.012 0.05],'Position',[130 230 150 20],'Callback',@ncitiesslider_Callback);
 ncitiessliderv = uicontrol(ph,'Style','text','String',NVAR,'Position',[280 230 50 20]);
@@ -95,10 +95,10 @@ mutsliderv = uicontrol(ph,'Style','text','String',round(PR_MUT*100),'Position',[
 crossslidertxt = uicontrol(ph,'Style','text','String','Pr. Crossover','Position',[0 110 130 20]);
 crossslider = uicontrol(ph,'Style','slider','Max',100,'Min',0,'Value',round(PR_CROSS*100),'Sliderstep',[0.01 0.05],'Position',[130 110 150 20],'Callback',@crossslider_Callback);
 crosssliderv = uicontrol(ph,'Style','text','String',round(PR_CROSS*100),'Position',[280 110 50 20]);
-elitslidertxt = uicontrol(ph,'Style','text','String','% elite','Position',[0 80 130 20]);
-elitslider = uicontrol(ph,'Style','slider','Max',100,'Min',0,'Value',round(ELITIST*100),'Sliderstep',[0.01 0.05],'Position',[130 80 150 20],'Callback',@elitslider_Callback);
-elitsliderv = uicontrol(ph,'Style','text','String',round(ELITIST*100),'Position',[280 80 50 20]);
-crossover = uicontrol(ph,'Style','popupmenu', 'String',{'xalt_edges'}, 'Value',1,'Position',[10 50 130 20],'Callback',@crossover_Callback);
+elitslidertxt = uicontrol(ph,'Style','text','String',sliderTxt,'Position',[0 80 130 20]);
+elitslider = uicontrol(ph,'Style','slider','Max',maxSlider,'Min',minSlider,'Value',val,'Sliderstep',[0.01 0.05],'Position',[130 80 150 20],'Callback',@elitslider_Callback);
+elitsliderv = uicontrol(ph,'Style','text','String',val,'Position',[280 80 50 20]);
+crossover = uicontrol(ph,'Style','popupmenu', 'String',{'order_crossover'}, 'Value',1,'Position',[10 50 130 20],'Callback',@crossover_Callback);
 %inputbutton = uicontrol(ph,'Style','pushbutton','String','Input','Position',[55 10 70 30],'Callback',@inputbutton_Callback);
 runbutton = uicontrol(ph,'Style','pushbutton','String','START','Position',[0 10 50 30],'Callback',@runbutton_Callback);
 
@@ -111,20 +111,19 @@ saveas(fh, testName, 'jpg');
 close(fh);
 %%%%%%%%%%%%%
 
-
-    function datasetpopup_Callback(hObject,eventdata)
+    function datasetpopup_Callback(hObject,~)
         dataset_value = get(hObject,'Value');
         dataset = datasets{dataset_value};
         % load the dataset
         data = load(['datasets/' dataset]);
         x=data(:,1)/max([data(:,1);data(:,2)]);y=data(:,2)/max([data(:,1);data(:,2)]);
         %x=data(:,1);y=data(:,2);
-        NVAR=size(data,1);
+        NVAR=size(data,1); 
         set(ncitiessliderv,'String',size(data,1));
         axes(ah1);
-        plot(x,y,'ko')
+        plot(x,y,'ko') 
     end
-    function llooppopup_Callback(hObject,eventdata)
+    function llooppopup_Callback(hObject,~)
         lloop_value = get(hObject,'Value');
         if lloop_value==1
             LOCALLOOP = 0;
@@ -132,67 +131,71 @@ close(fh);
             LOCALLOOP = 1;
         end
     end
-    function ncitiesslider_Callback(hObject,eventdata)
+    function ncitiesslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(ncitiessliderv,'String',slider_value);
         NVAR = round(slider_value);
     end
-    function nindslider_Callback(hObject,eventdata)
+    function nindslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(nindsliderv,'String',slider_value);
         NIND = round(slider_value);
     end
-    function genslider_Callback(hObject,eventdata)
+    function genslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(gensliderv,'String',slider_value);
         MAXGEN = round(slider_value);
     end
-    function mutslider_Callback(hObject,eventdata)
+    function mutslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(mutsliderv,'String',slider_value);
         PR_MUT = round(slider_value)/100;
     end
-    function crossslider_Callback(hObject,eventdata)
+    function crossslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(crosssliderv,'String',slider_value);
         PR_CROSS = round(slider_value)/100;
     end
-    function elitslider_Callback(hObject,eventdata)
+    function elitslider_Callback(hObject,~)
         fslider_value = get(hObject,'Value');
         slider_value = round(fslider_value);
         set(hObject,'Value',slider_value);
         set(elitsliderv,'String',slider_value);
-        ELITIST = round(slider_value)/100;
-        GGAP = 1-ELITIST;
+        if(SELECTION<=1)
+            SELECTION = round(slider_value)/100;
+            GGAP = 1-SELECTION;
+        else
+            SELECTION = round(slider_value);
+        end
     end
-    function crossover_Callback(hObject,eventdata)
+    function crossover_Callback(hObject,~)
         crossover_value = get(hObject,'Value');
         crossovers = get(hObject,'String');
         CROSSOVER = crossovers(crossover_value);
         CROSSOVER = CROSSOVER{1};
     end
-    function runbutton_Callback(hObject,eventdata)
+    function runbutton_Callback(~,~)
         %set(ncitiesslider, 'Visible','off');
         set(nindslider,'Visible','off');
         set(genslider,'Visible','off');
         set(mutslider,'Visible','off');
         set(crossslider,'Visible','off');
         set(elitslider,'Visible','off');
-        run_ga(x, y, NIND, MAXGEN, NVAR, ELITIST, STOP_PERCENTAGE, PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP, ah1, ah2, ah3);
+        run_ga(x, y, NIND, MAXGEN, NVAR, SELECTION, STOP_PERCENTAGE, PR_CROSS, PR_MUT, CROSSOVER, LOCALLOOP, ah1, ah2, ah3);
         end_run();
     end
-    function inputbutton_Callback(hObject,eventdata)
-        [x y] = input_cities(NVAR);
+    function inputbutton_Callback(~,~)
+        [x,y] = input_cities(NVAR);
         axes(ah1);
         plot(x,y,'ko')
     end
