@@ -296,9 +296,9 @@ decrease. Furthermore, the combined increase of individuals and
 generations, given that the former is very high, makes the test to take extremly
 long compared to the base, going from 6.88 seconds to 141.02 seconds, ~20.5
 times more. 
-\textcolor{red}{TODO: Añadir posibles causas de que no mejore, y mencionar cuál
-puede ser la razón de que no cambie prácticamente nada cuando se modifica
-mutacion y crossover}
 
+This can be due to the fact that the crossover operator favors the local minimum and the mutation 
+operator try to explore new paths, but as the mutation operator only changes the position of one number in 
+the sequence of cities, if the percentage of mutation is small, the exploration will be reduced.
 
 

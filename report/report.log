@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  11 JAN 2017 12:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  11 JAN 2017 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1121,10 +1121,10 @@ t line 78.
 sover/elitism.jpg>]) [45 <./sections/img/order_crossover/crossMut.jpg>] (./repo
 rt.aux) ) 
 Here is how much of TeX's memory you used:
- 6192 strings out of 493089
- 85964 string characters out of 6134842
+ 6190 strings out of 493089
+ 85948 string characters out of 6134842
  448674 words of memory out of 5000000
- 9491 multiletter control sequences out of 15000+600000
+ 9489 multiletter control sequences out of 15000+600000
  13527 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,8n,47p,425b,1843s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1140,7 +1140,7 @@ r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
 ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (46 pages, 11023756 bytes).
+Output written on report.pdf (46 pages, 11023745 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  140 compressed objects within 2 object streams
