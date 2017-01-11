@@ -10,7 +10,7 @@
 \contentsline {subsubsection}{\numberline {2.1.2}Modified code}{5}
 \contentsline {subsection}{\numberline {2.2}Specific tests}{6}
 \contentsline {subsubsection}{\numberline {2.2.1}Original code}{6}
-\contentsline {subsubsection}{\numberline {2.2.2}Improved code}{9}
+\contentsline {subsubsection}{\numberline {2.2.2}Modified code}{9}
 \contentsline {section}{\numberline {3}Optional part}{12}
 \contentsline {section}{\numberline {4}Appendix}{16}
 \contentsline {subsection}{\numberline {4.1}tsp\_ImprovePopulation.m}{16}

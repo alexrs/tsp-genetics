@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.1.8)  11 JAN 2017 17:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.1.8)  11 JAN 2017 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -659,7 +659,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--109
 File: sections/img/specific/xalt_edges/general_1.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_1.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_1.jpg used on
- input line 127.
+ input line 125.
 (pdftex.def)             Requested size: 369.88582pt x 152.38092pt.
 
 <sections/img/specific/xalt_edges/general_2.jpg, id=31, 1448.41125pt x 594.22pt
@@ -667,15 +667,15 @@ Package pdftex.def Info: sections/img/specific/xalt_edges/general_1.jpg used on
 File: sections/img/specific/xalt_edges/general_2.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_2.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_2.jpg used on
- input line 136.
+ input line 134.
 (pdftex.def)             Requested size: 369.88582pt x 151.74623pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--147
+Underfull \hbox (badness 10000) in paragraph at lines 129--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--147
+Underfull \hbox (badness 10000) in paragraph at lines 129--145
 
  []
 
@@ -686,7 +686,7 @@ t>
 File: sections/img/specific/xalt_edges/general_3.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_3.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_3.jpg used on
- input line 151.
+ input line 149.
 (pdftex.def)             Requested size: 256.0748pt x 105.90675pt.
 
 <sections/img/specific/xalt_edges/general_4.jpg, id=38, 1442.38875pt x 590.205p
@@ -694,10 +694,10 @@ t>
 File: sections/img/specific/xalt_edges/general_4.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_4.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_4.jpg used on
- input line 153.
+ input line 151.
 (pdftex.def)             Requested size: 256.0748pt x 104.78238pt.
 
-Overfull \hbox (45.00566pt too wide) in paragraph at lines 148--154
+Overfull \hbox (45.00566pt too wide) in paragraph at lines 146--152
 []  [] 
  []
 
@@ -707,10 +707,10 @@ pt>
 File: sections/img/specific/xalt_edges/general_5.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_5.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_5.jpg used on
- input line 157.
+ input line 155.
 (pdftex.def)             Requested size: 369.88582pt x 154.3558pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--171
+Underfull \hbox (badness 10000) in paragraph at lines 158--169
 
  []
 
@@ -721,7 +721,7 @@ pt>
 File: sections/img/specific/xalt_edges/general_6.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_6.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_6.jpg used on
- input line 176.
+ input line 174.
 (pdftex.def)             Requested size: 256.0748pt x 105.30554pt.
 
 <sections/img/specific/xalt_edges/general_7.jpg, id=44, 1430.34375pt x 582.175p
@@ -729,10 +729,10 @@ t>
 File: sections/img/specific/xalt_edges/general_7.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_7.jpg used on
- input line 178.
+ input line 176.
 (pdftex.def)             Requested size: 256.0748pt x 104.22733pt.
 
-Overfull \hbox (45.00566pt too wide) in paragraph at lines 173--179
+Overfull \hbox (45.00566pt too wide) in paragraph at lines 171--177
 []  [] 
  []
 
@@ -742,21 +742,21 @@ t>
 File: sections/img/specific/xalt_edges/general_8.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_8.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_8.jpg used on
- input line 182.
+ input line 180.
 (pdftex.def)             Requested size: 369.88582pt x 152.83728pt.
 
-Overfull \hbox (27.74352pt too wide) in paragraph at lines 185--190
+Overfull \hbox (27.74352pt too wide) in paragraph at lines 183--188
 []\OT1/cmr/m/n/12 The test con-firms the re-sults ob-tained in the gen-eral tes
 t. The best ra-tio of crossover|mutation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--190
+Underfull \hbox (badness 10000) in paragraph at lines 183--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
 
  []
 
@@ -766,16 +766,16 @@ File: sections/img/specific/xalt_edges/general_6.jpg Graphic file (type jpg)
 
 <use sections/img/specific/xalt_edges/general_6.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_6.jpg used on
- input line 197.
+ input line 195.
 (pdftex.def)             Requested size: 369.88582pt x 152.10202pt.
 File: sections/img/specific/xalt_edges/general_7.jpg Graphic file (type jpg)
 
 <use sections/img/specific/xalt_edges/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_7.jpg used on
- input line 205.
+ input line 203.
 (pdftex.def)             Requested size: 369.88582pt x 150.54466pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--212
+Underfull \hbox (badness 10000) in paragraph at lines 205--210
 
  []
 
@@ -786,15 +786,15 @@ File: sections/img/specific/order_crossover/general_1.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_1.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_1.jpg us
-ed on input line 220.
+ed on input line 218.
 (pdftex.def)             Requested size: 369.88582pt x 151.07767pt.
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 223--231
+Underfull \hbox (badness 10000) in paragraph at lines 221--229
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--231
+Underfull \hbox (badness 10000) in paragraph at lines 221--229
 
  []
 
@@ -805,7 +805,7 @@ File: sections/img/specific/order_crossover/general_2.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_2.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_2.jpg us
-ed on input line 235.
+ed on input line 233.
 (pdftex.def)             Requested size: 256.0748pt x 104.64137pt.
 
 <sections/img/specific/order_crossover/general_3.jpg, id=54, 1431.3475pt x 582.
@@ -814,10 +814,10 @@ File: sections/img/specific/order_crossover/general_3.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_3.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_3.jpg us
-ed on input line 237.
+ed on input line 235.
 (pdftex.def)             Requested size: 256.0748pt x 104.14738pt.
 
-Overfull \hbox (45.00566pt too wide) in paragraph at lines 232--238
+Overfull \hbox (45.00566pt too wide) in paragraph at lines 230--236
 []  [] 
  []
 
@@ -828,15 +828,15 @@ File: sections/img/specific/order_crossover/general_4.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_4.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_4.jpg us
-ed on input line 241.
+ed on input line 239.
 (pdftex.def)             Requested size: 369.88582pt x 151.78789pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--254
+Underfull \hbox (badness 10000) in paragraph at lines 242--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--254
+Underfull \hbox (badness 10000) in paragraph at lines 242--252
 
  []
 
@@ -849,10 +849,10 @@ File: sections/img/specific/order_crossover/general_5.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_5.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_5.jpg us
-ed on input line 256.
+ed on input line 254.
 (pdftex.def)             Requested size: 369.88582pt x 147.75084pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--264
+Underfull \hbox (badness 10000) in paragraph at lines 257--262
 
  []
 
@@ -863,7 +863,7 @@ File: sections/img/specific/order_crossover/general_6.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_6.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_6.jpg us
-ed on input line 275.
+ed on input line 273.
 (pdftex.def)             Requested size: 256.0748pt x 103.35446pt.
 
 <sections/img/specific/order_crossover/general_7.jpg, id=61, 1433.355pt x 584.1
@@ -872,20 +872,20 @@ File: sections/img/specific/order_crossover/general_7.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_7.jpg us
-ed on input line 277.
+ed on input line 275.
 (pdftex.def)             Requested size: 256.0748pt x 104.36388pt.
 
-Overfull \hbox (45.00566pt too wide) in paragraph at lines 265--278
+Overfull \hbox (45.00566pt too wide) in paragraph at lines 263--276
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--288
+Underfull \hbox (badness 10000) in paragraph at lines 277--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--288
+Underfull \hbox (badness 10000) in paragraph at lines 277--286
 
  []
 
@@ -896,7 +896,7 @@ File: sections/img/specific/order_crossover/general_7.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_7.jpg us
-ed on input line 290.
+ed on input line 288.
 (pdftex.def)             Requested size: 369.88582pt x 150.7518pt.
 )
 (./sections/optional.tex
@@ -1139,7 +1139,7 @@ ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 tt12.pfb>
-Output written on report.pdf (46 pages, 11023893 bytes).
+Output written on report.pdf (46 pages, 11023859 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  140 compressed objects within 2 object streams
