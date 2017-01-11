@@ -6,14 +6,12 @@ whole set of individuals (with our implementation), against q randomly
 selected, and the selected value for q is 10, as it it is typically
 recommended [1].\\ 
 This method consists of holding, in a round robin tournament way,
-competitions, and keeping the \mu \textcolor{red}{FIX} better individuals. In our
-implementation, we skipped the round roubin tournament, and made a purely
-iterative competition, as it yields the same result. 
+competitions, and keeping the $\mu$ better individuals.
 The code for this implementation can be found in the appendix, in 3.12,
-select\_rr, where the implementation for the round robin tournament is, and
-also, some minor modifications to tspgui, and run\_ga were necessary, in
+\texttt{select\_rr}, where the implementation for the round robin tournament is, and
+also, some minor modifications to \texttt{tspgui}, and \texttt{run\_ga} were necessary, in
 order to make it work with both elitism and selection, depending on the value
-passed as parameter. For the test, test.m was modified, and now includes
+passed as parameter. For the test, \texttt{test.m} was modified, and now includes
 an option to perform the optional tests.\\
 \\
 The tests made for this implementation, as it uses the crossover we

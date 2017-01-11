@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.1.8)  10 JAN 2017 15:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.5.31)  11 JAN 2017 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **report.tex
 (./report.tex
-LaTeX2e <2011/06/27>
-Babel <3.9h> and hyphenation patterns for 78 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -23,25 +23,25 @@ File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
-Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count87
@@ -57,27 +57,27 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count90
@@ -85,24 +85,24 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen111
 \Gin@req@width=\dimen112
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen113
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen114
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count91
@@ -143,15 +143,15 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2004/08/06 v2.20
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks21
 \thm@bodyfont=\toks22
 \thm@headfont=\toks23
@@ -162,20 +162,20 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip48
 \dth@everypar=\toks26
 )
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2008/03/30 v1.1d Input encoding file
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks27
 \inpenc@posthook=\toks28
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
-File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -324,8 +324,8 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
-File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -355,8 +355,8 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
-File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -379,7 +379,7 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen122
 \WF@size=\dimen123
 \c@WF@wrappedlines=\count103
@@ -387,7 +387,7 @@ Now handling font encoding U ...
 \WF@everypar=\toks29
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count104
 \lst@gtempboxa=\box29
 \lst@token=\toks30
@@ -401,25 +401,25 @@ Package: wrapfig 2003/01/31  v 3.6
 \lst@lineno=\count109
 \lst@maxwidth=\dimen127
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count110
 \lst@skipnumbers=\count111
 \lst@framebox=\box30
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2013/08/26 1.5b listings configuration
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
-Package: listings 2013/08/26 1.5b (Carsten Heinz)
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2013/12/03 3.9h The Babel package
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/09/25 3.9l The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2012/08/20 v3.3p English support from the babel system
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2013/12/03 3.9h Babel common definitions
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/09/25 3.9l Babel common definitions
 \babel@savecnt=\count112
 \U@D=\dimen128
 )
@@ -427,15 +427,15 @@ File: babel.def 2013/12/03 3.9h Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
+Package color Info: Driver file: pdftex.def on input line 142.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/import/import.sty
 Package: import 2009/03/23  v 5.1
 ) (./report.aux)
 \openout1 = `report.aux'.
@@ -452,7 +452,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -487,7 +486,7 @@ LaTeX Font Info:    ... okay on input line 19.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
 \scratchdimen=\dimen129
@@ -500,11 +499,11 @@ LaTeX Font Info:    ... okay on input line 19.
 \MPnumerator=\count117
 \makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks32
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -513,22 +512,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -540,7 +539,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -548,19 +547,23 @@ e
 
 (./sections/title.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 30.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 30.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./report.toc)
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./rep
+ort.toc)
 \tf@toc=\write3
 \openout3 = `report.toc'.
 
- [1] (./sections/intro.tex) (./sections/implementation.tex
+
+[1] (./sections/intro.tex) (./sections/implementation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--20
 
  []
@@ -596,8 +599,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--20
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 24.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
@@ -648,7 +651,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--70
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--113
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
 
  []
 
@@ -658,7 +661,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--113
 File: sections/img/specific/xalt_edges/general_1.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_1.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_1.jpg used on
- input line 131.
+ input line 127.
 (pdftex.def)             Requested size: 369.88582pt x 152.38092pt.
 
 <sections/img/specific/xalt_edges/general_2.jpg, id=31, 1448.41125pt x 594.22pt
@@ -666,15 +669,15 @@ Package pdftex.def Info: sections/img/specific/xalt_edges/general_1.jpg used on
 File: sections/img/specific/xalt_edges/general_2.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_2.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_2.jpg used on
- input line 140.
+ input line 136.
 (pdftex.def)             Requested size: 369.88582pt x 151.74623pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--151
+Underfull \hbox (badness 10000) in paragraph at lines 131--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--151
+Underfull \hbox (badness 10000) in paragraph at lines 131--147
 
  []
 
@@ -685,7 +688,7 @@ t>
 File: sections/img/specific/xalt_edges/general_3.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_3.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_3.jpg used on
- input line 155.
+ input line 151.
 (pdftex.def)             Requested size: 256.0748pt x 105.90675pt.
 
 <sections/img/specific/xalt_edges/general_4.jpg, id=38, 1442.38875pt x 590.205p
@@ -693,10 +696,10 @@ t>
 File: sections/img/specific/xalt_edges/general_4.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_4.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_4.jpg used on
- input line 157.
+ input line 153.
 (pdftex.def)             Requested size: 256.0748pt x 104.78238pt.
 
-Overfull \hbox (45.00566pt too wide) in paragraph at lines 152--158
+Overfull \hbox (45.00566pt too wide) in paragraph at lines 148--154
 []  [] 
  []
 
@@ -706,10 +709,10 @@ pt>
 File: sections/img/specific/xalt_edges/general_5.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_5.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_5.jpg used on
- input line 161.
+ input line 157.
 (pdftex.def)             Requested size: 369.88582pt x 154.3558pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--175
+Underfull \hbox (badness 10000) in paragraph at lines 160--171
 
  []
 
@@ -720,7 +723,7 @@ pt>
 File: sections/img/specific/xalt_edges/general_6.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_6.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_6.jpg used on
- input line 180.
+ input line 176.
 (pdftex.def)             Requested size: 256.0748pt x 105.30554pt.
 
 <sections/img/specific/xalt_edges/general_7.jpg, id=44, 1430.34375pt x 582.175p
@@ -728,10 +731,10 @@ t>
 File: sections/img/specific/xalt_edges/general_7.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_7.jpg used on
- input line 182.
+ input line 178.
 (pdftex.def)             Requested size: 256.0748pt x 104.22733pt.
 
-Overfull \hbox (45.00566pt too wide) in paragraph at lines 177--183
+Overfull \hbox (45.00566pt too wide) in paragraph at lines 173--179
 []  [] 
  []
 
@@ -741,21 +744,21 @@ t>
 File: sections/img/specific/xalt_edges/general_8.jpg Graphic file (type jpg)
  <use sections/img/specific/xalt_edges/general_8.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_8.jpg used on
- input line 186.
+ input line 182.
 (pdftex.def)             Requested size: 369.88582pt x 152.83728pt.
 
-Overfull \hbox (27.74352pt too wide) in paragraph at lines 189--194
+Overfull \hbox (27.74352pt too wide) in paragraph at lines 185--190
 []\OT1/cmr/m/n/12 The test con-firms the re-sults ob-tained in the gen-eral tes
 t. The best ra-tio of crossover|mutation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--194
+Underfull \hbox (badness 10000) in paragraph at lines 185--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--198
+Underfull \hbox (badness 10000) in paragraph at lines 191--194
 
  []
 
@@ -765,16 +768,16 @@ File: sections/img/specific/xalt_edges/general_6.jpg Graphic file (type jpg)
 
 <use sections/img/specific/xalt_edges/general_6.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_6.jpg used on
- input line 201.
+ input line 197.
 (pdftex.def)             Requested size: 369.88582pt x 152.10202pt.
 File: sections/img/specific/xalt_edges/general_7.jpg Graphic file (type jpg)
 
 <use sections/img/specific/xalt_edges/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/xalt_edges/general_7.jpg used on
- input line 209.
+ input line 205.
 (pdftex.def)             Requested size: 369.88582pt x 150.54466pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--216
+Underfull \hbox (badness 10000) in paragraph at lines 207--212
 
  []
 
@@ -785,15 +788,15 @@ File: sections/img/specific/order_crossover/general_1.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_1.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_1.jpg us
-ed on input line 224.
+ed on input line 220.
 (pdftex.def)             Requested size: 369.88582pt x 151.07767pt.
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 227--235
+Underfull \hbox (badness 10000) in paragraph at lines 223--231
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--235
+Underfull \hbox (badness 10000) in paragraph at lines 223--231
 
  []
 
@@ -804,7 +807,7 @@ File: sections/img/specific/order_crossover/general_2.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_2.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_2.jpg us
-ed on input line 239.
+ed on input line 235.
 (pdftex.def)             Requested size: 256.0748pt x 104.64137pt.
 
 <sections/img/specific/order_crossover/general_3.jpg, id=54, 1431.3475pt x 582.
@@ -813,10 +816,10 @@ File: sections/img/specific/order_crossover/general_3.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_3.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_3.jpg us
-ed on input line 241.
+ed on input line 237.
 (pdftex.def)             Requested size: 256.0748pt x 104.14738pt.
 
-Overfull \hbox (45.00566pt too wide) in paragraph at lines 236--242
+Overfull \hbox (45.00566pt too wide) in paragraph at lines 232--238
 []  [] 
  []
 
@@ -827,15 +830,15 @@ File: sections/img/specific/order_crossover/general_4.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_4.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_4.jpg us
-ed on input line 245.
+ed on input line 241.
 (pdftex.def)             Requested size: 369.88582pt x 151.78789pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--258
+Underfull \hbox (badness 10000) in paragraph at lines 244--254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 248--258
+Underfull \hbox (badness 10000) in paragraph at lines 244--254
 
  []
 
@@ -848,10 +851,10 @@ File: sections/img/specific/order_crossover/general_5.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_5.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_5.jpg us
-ed on input line 260.
+ed on input line 256.
 (pdftex.def)             Requested size: 369.88582pt x 147.75084pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--268
+Underfull \hbox (badness 10000) in paragraph at lines 259--264
 
  []
 
@@ -862,7 +865,7 @@ File: sections/img/specific/order_crossover/general_6.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_6.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_6.jpg us
-ed on input line 279.
+ed on input line 275.
 (pdftex.def)             Requested size: 256.0748pt x 103.35446pt.
 
 <sections/img/specific/order_crossover/general_7.jpg, id=61, 1433.355pt x 584.1
@@ -871,20 +874,20 @@ File: sections/img/specific/order_crossover/general_7.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_7.jpg us
-ed on input line 281.
+ed on input line 277.
 (pdftex.def)             Requested size: 256.0748pt x 104.36388pt.
 
-Overfull \hbox (45.00566pt too wide) in paragraph at lines 269--282
+Overfull \hbox (45.00566pt too wide) in paragraph at lines 265--278
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--292
+Underfull \hbox (badness 10000) in paragraph at lines 279--288
 
  []
 
@@ -895,43 +898,16 @@ File: sections/img/specific/order_crossover/general_7.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_7.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_7.jpg us
-ed on input line 294.
+ed on input line 290.
 (pdftex.def)             Requested size: 369.88582pt x 150.7518pt.
 )
 (./sections/performance.tex) (./sections/optional.tex
-! Missing $ inserted.
-<inserted text> 
-                $
-l.9 competitions, and keeping the \mu
-                                      \textcolor{red}{FIX} better individual...
+Underfull \hbox (badness 10000) in paragraph at lines 3--21
 
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.23 
-     
-? 
-
-Overfull \hbox (2308.37314pt too wide) in paragraph at lines 3--23
-\OT1/cmr/m/n/12 the $\OML/cmm/m/it/12 ^^V[][]betterindividuals:Inourimplementat
-ion; weskippedtheroundroubintournament; andmadeapurelyiterativecompetition; asi
-tyieldsthesameresult:Thecodeforthisimplementationcanbefoundintheappendix; in\OT
-1/cmr/m/n/12 3\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 12\OML/cmm/m/it/12 ; select[]rr
-; wheretheimplementationfortheroundrobintournamentis; andalso; someminormodific
-ationstotspgui; andrun[]gawerenecessary; inordertomakeitworkwithbothelitismands
-election; dependingonthevaluepassedasparameter:Forthetest; test:mwasmodified; a
-ndnowincludesanoptiontoperformtheoptionaltests:[] 
  []
 
 
-Overfull \hbox (231.82236pt too wide) in paragraph at lines 3--23
-\OML/cmm/m/it/12 Thetestsmadeforthisimplementation; asitusesthecrossoverweimple
-mented; wedecidedtotestagainstthebasecaseofsaidimplementation:[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--23
+Underfull \hbox (badness 10000) in paragraph at lines 3--21
 
  []
 
@@ -939,10 +915,10 @@ File: sections/img/specific/order_crossover/general_1.jpg Graphic file (type jp
 g)
 <use sections/img/specific/order_crossover/general_1.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_1.jpg us
-ed on input line 26.
+ed on input line 24.
 (pdftex.def)             Requested size: 369.88582pt x 151.07767pt.
  [12]
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
 
  []
 
@@ -953,7 +929,7 @@ File: sections/img/specific/order_crossover/general_8.jpg Graphic file (type jp
 g)
  <use sections/img/specific/order_crossover/general_8.jpg>
 Package pdftex.def Info: sections/img/specific/order_crossover/general_8.jpg us
-ed on input line 34.
+ed on input line 32.
 (pdftex.def)             Requested size: 369.88582pt x 154.63863pt.
 
 <sections/img/optional/optional_1.jpg, id=71, 1455.4375pt x 600.2425pt>
@@ -961,10 +937,10 @@ File: sections/img/optional/optional_1.jpg Graphic file (type jpg)
 
 <use sections/img/optional/optional_1.jpg>
 Package pdftex.def Info: sections/img/optional/optional_1.jpg used on input lin
-e 43.
+e 41.
 (pdftex.def)             Requested size: 369.88582pt x 152.54233pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--49
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
  []
 
@@ -975,7 +951,7 @@ File: sections/img/optional/optional_2.jpg Graphic file (type jpg)
 
 <use sections/img/optional/optional_2.jpg>
 Package pdftex.def Info: sections/img/optional/optional_2.jpg used on input lin
-e 52.
+e 50.
 (pdftex.def)             Requested size: 426.79134pt x 175.76942pt.
 
 <sections/img/optional/optional_3.jpg, id=76, 1461.46pt x 602.25pt>
@@ -983,7 +959,7 @@ File: sections/img/optional/optional_3.jpg Graphic file (type jpg)
 
 <use sections/img/optional/optional_3.jpg>
 Package pdftex.def Info: sections/img/optional/optional_3.jpg used on input lin
-e 58.
+e 56.
 (pdftex.def)             Requested size: 426.79134pt x 175.87024pt.
 
 <sections/img/optional/optional_4.jpg, id=77, 1463.4675pt x 602.25pt>
@@ -991,7 +967,7 @@ File: sections/img/optional/optional_4.jpg Graphic file (type jpg)
 
 <use sections/img/optional/optional_4.jpg>
 Package pdftex.def Info: sections/img/optional/optional_4.jpg used on input lin
-e 63.
+e 61.
 (pdftex.def)             Requested size: 426.79134pt x 175.6313pt.
 
 <sections/img/optional/optional_5.jpg, id=78, 1455.4375pt x 604.2575pt>
@@ -1001,10 +977,10 @@ File: sections/img/optional/optional_5.jpg Graphic file (type jpg)
 
 <use sections/img/optional/optional_5.jpg>
 Package pdftex.def Info: sections/img/optional/optional_5.jpg used on input lin
-e 68.
+e 66.
 (pdftex.def)             Requested size: 426.79134pt x 177.19409pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--84
+Underfull \hbox (badness 10000) in paragraph at lines 69--82
 
  []
 
@@ -1015,14 +991,14 @@ ions \OT1/cmr/m/n/12 http://mnemstudio.org/genetic-
  []
 
 ) [15 <./sections/img/optional/optional_5.jpg>] (./sections/apendix.tex
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 (../code/tsp_ImprovePopulation.m
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 13.
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 13.
@@ -1031,12 +1007,12 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (../code/order_crossover.m [20]) (../code/order_low_level.m [21])
 (../code/tspfun.m [22]) (../code/mutateTSP.m [23]) (../code/run_ga_test.m
 [24] [25]) (../code/tspgui_test.m
-Overfull \hbox (64.89409pt too wide) in paragraph at lines 6--7
+Overfull \hbox (64.89409pt too wide) in paragraph at lines 5--6
 [][][][] 
  []
 
 [26]
-Overfull \hbox (64.89409pt too wide) in paragraph at lines 18--20
+Overfull \hbox (64.89409pt too wide) in paragraph at lines 20--22
 [][][][] 
  []
 
@@ -1145,26 +1121,26 @@ t line 78.
 sover/elitism.jpg>]) [45 <./sections/img/order_crossover/crossMut.jpg>] (./repo
 rt.aux) ) 
 Here is how much of TeX's memory you used:
- 6181 strings out of 493304
- 85232 string characters out of 6139872
- 432800 words of memory out of 5000000
- 9448 multiletter control sequences out of 15000+600000
+ 6198 strings out of 493089
+ 86068 string characters out of 6134842
+ 448674 words of memory out of 5000000
+ 9491 multiletter control sequences out of 15000+600000
  13527 words of font info for 52 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,8n,47p,425b,1841s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt12.pfb>
-Output written on report.pdf (46 pages, 11030322 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 38i,8n,47p,425b,1843s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmcs
+c10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
+10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (46 pages, 11023756 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  140 compressed objects within 2 object streams
