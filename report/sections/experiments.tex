@@ -43,7 +43,7 @@ appendix.
 
 When it comes to number of individuals, as expected, a relatively low number
 of individuals does not provide adecuate results, as can be observed by looking
-at the start of the graph (3.13.1). Almost all datasets start in global maximum, and only
+at the start of the graph (4.13.1). Almost all datasets start in global maximum, and only
 a couple in a local max. However, the majority of them have one of their
 lowest point when the number of individuals is 200 (except for the highest
 dataset, which has it's lowest point at 750) and from that point, it stays
@@ -51,7 +51,7 @@ constant, or even raises, hence it can be said that any number of individuals hi
 would not be benefitial, and actually be just cumbersome when it comes to
 computational cost.
 
-Regarding the number of generations (3.13.2), once again, it is to be expected that a
+Regarding the number of generations (4.13.2), once again, it is to be expected that a
 low quantity of generations will not yield good results. But that is not the
 only thing the number of individuals and generations have in common, since it
 seems like 200 is one of the best options for the number of generations.
@@ -61,14 +61,14 @@ towards higher number of generations. In the specific tests this will be
 further studied, whether 200, or a higher number is better, and whether the
 higher associated computational cost is worth.
 
-When it comes to the percentage of elitism (3.13.3), the results are clearer.
+When it comes to the percentage of elitism (4.13.3), the results are clearer.
 With no exceptions, the lowest value for every single one of the datasets
 is between 0.05 and 0.1, any higher, or any lower, and the distance
 skyrockets, having the highest distances values at elitism = 1. \\
 This phenomena has an easy explanation, the higher the elitism, the more likely it is that the
 algorithm will stay at a local maxima. \\
 
-For crossover and mutation (3.13.4), the test reflects perfectly the balance between exploitation and
+For crossover and mutation (4.13.4), the test reflects perfectly the balance between exploitation and
 exploration, the overall result shows that the best performance comes when
 mutation has a value of 0.5, and crossover 0.5.\\
 Any value of mutation higher than 0.5, and the results start to worsen, because
@@ -85,26 +85,26 @@ As explained in the implementation section, the representation we
 implemented is path representation. Again, we will only discuss the
 results, the graphs can be found in the appendix
 
-Similarly to adjacency representation, the result for the test (3.13.5)
+Similarly to adjacency representation, the result for the test (4.13.5)
 of increasing the number of individuals has a generally located minimum local at
 200, although for some cases, the distance becomes constant at 100. The only
 noticeable difference is that the values for the distances when the number of
 individuals is very high (750,100) does not increase, rather it seems to keep
 ever so slightly decreasing.
 
-With regards with number of generations(3.13.6), once again, as expected, there is a number of individuals from which the
+With regards with number of generations(4.13.6), once again, as expected, there is a number of individuals from which the
 change in the result is almost insignificant. That point, as can be observed, is 200
 individuals, the same as the other representation. One difference is that the
 values obtained from 750 individuals forward is actually worse in some
 cases, if not the same, while with the other representation there were some
 cases in which it improved.
 
-For the elitism(3.13.7), there is no doubt that 0.05 is the best
+For the elitism(4.13.7), there is no doubt that 0.05 is the best
 percentage of elitism that can be choosen with this representation. The results
 are somewhat similar to the previous representation, but the slope at the
 latest values (0.5 forward) is not so steep
 
-Lately, the result of the crossover and mutation (3.13.8)  test is daunting. It was repeated, in case it was somehow erroneous, but the same graph was obtained.
+Lately, the result of the crossover and mutation (4.13.8)  test is daunting. It was repeated, in case it was somehow erroneous, but the same graph was obtained.
 \\
 
 \subsection{Specific tests}
@@ -297,8 +297,12 @@ generations, given that the former is very high, makes the test to take extremly
 long compared to the base, going from 6.88 seconds to 141.02 seconds, ~20.5
 times more. 
 
-This can be due to the fact that the crossover operator favors the local minimum and the mutation 
-operator try to explore new paths, but as the mutation operator only changes the position of one number in 
-the sequence of cities, if the percentage of mutation is small, the exploration will be reduced.
+This can be due to the fact that the crossover operator favors the local
+minimum and the mutation operator tries to explore new paths, but as the mutation
+operator only changes the position of one number in the sequence of cities,
+the exploration factor of the chosen mutation is not big enough to compete
+against the exploitation of the crossover, regardless of how big the
+percentage of mutation is.  
+
 
 
